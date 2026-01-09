@@ -1,0 +1,106 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A happy child sitting at a desk and drawing in a journal with crayons.",
+      "imageUrl": "https://images.unsplash.com/photo-1503944583220-79d6f827a1f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGlsZCUyMGRyYXdpbmd8ZW58MHx8fHwxNzIyNDI5NjM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child drawing"
+    },
+    {
+      "id": "activity-painting",
+      "description": "A close-up of a child gleefully mixing bright paints with their fingers.",
+      "imageUrl": "https://images.unsplash.com/photo-1562147983-ac4a9a935b84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxraWQlMjBwYWludGluZ3xlbnwwfHx8fDE3MjQ0NDUxODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kid painting"
+    },
+    {
+      "id": "activity-writing",
+      "description": "A child's drawing of a superhero next to a handwritten story in a colorful notebook.",
+      "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxraWQlMjB3cml0aW5nJTIwam91cm5hbHxlbnwwfHx8fDE3MjM1MjYxNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kid writing journal"
+    },
+    {
+      "id": "activity-music",
+      "description": "A group of happy kids playing on homemade instruments like pot-drums and bottle-shakers.",
+      "imageUrl": "https://images.unsplash.com/photo-1612015849895-074a4f3238a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxraWRzJTIwbXVzaWN8ZW58MHx8fHwxNzI0NDQ1MjI3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids music"
+    },
+    {
+      "id": "activity-coding",
+      "description": "A child's face lit by a tablet screen showing a cartoon character moving through a maze they designed.",
+      "imageUrl": "https://images.unsplash.com/photo-1525923138999-4b134d109751?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWQlMjB0YWJsZXR8ZW58MHx8fHwxNzI0NDQ1MjUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kid tablet"
+    },
+    {
+      "id": "activity-sculpture",
+      "description": "A fantastical creature made from multi-colored modeling clay and googly eyes.",
+      "imageUrl": "https://images.unsplash.com/photo-1605649487212-47bdab062a3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwbGF5JTIwZG91Z2h8ZW58MHx8fHwxNzIzNTI2MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "play dough"
+    },
+    {
+      "id": "activity-photography",
+      "description": "A low-angle shot of a flower in a garden, taken from a child's perspective.",
+      "imageUrl": "https://images.unsplash.com/photo-1516038852343-4a058ab35a25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxraWQlMjBwaG90b2dyYXBoZXJ8ZW58MHx8fHwxNzI0NDQ1Mjk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kid photographer"
+    },
+    {
+      "id": "activity-coloring",
+      "description": "A half-colored drawing of a castle with crayons lying next to it.",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1664024828132-75c838a29e2c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "coloring page"
+    },
+    {
+      "id": "activity-comic",
+      "description": "A blank comic book panel template on a desk with colored pencils.",
+      "imageUrl": "https://images.unsplash.com/photo-1593438358245-7d3d27b7b12c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "comic template"
+    },
+    {
+      "id": "submission-1",
+      "description": "A child's watercolor painting of a colorful dinosaur.",
+      "imageUrl": "https://images.unsplash.com/photo-1522069394074-14c114d7e232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMHdhdGVyY29sb3J8ZW58MHx8fHwxNzI0NDQ1MzIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child watercolor"
+    },
+    {
+      "id": "submission-2",
+      "description": "A child's drawing of a rocket ship flying through space with planets and stars.",
+      "imageUrl": "https://images.unsplash.com/photo-1609803393033-a20c451538c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "space drawing"
+    },
+    {
+      "id": "submission-3",
+      "description": "A friendly robot made from colorful modeling clay stands on a table.",
+      "imageUrl": "https://images.unsplash.com/photo-1618762188232-3a3d76b4a4a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwbGF5ZG91Z2glMjBjcmVhdGlvbnxlbnwwfHx8fDE3MjQ0NDUzNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "playdough creation"
+    },
+    {
+      "id": "submission-4",
+      "description": "A child's colorful drawing of a fish swimming in the ocean.",
+      "imageUrl": "https://images.unsplash.com/photo-1543851502-b67335605f23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "fish drawing"
+    },
+    {
+      "id": "login-art",
+      "description": "A child joyfully writing or drawing in a notebook, surrounded by art supplies.",
+      "imageUrl": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxqb3VybmFsfGVufDB8fHx8MTcyMzUyNjI5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "journal"
+    },
+    {
+      "id": "about-us",
+      "description": "A diverse group of kids collaborating and smiling.",
+      "imageUrl": "https://images.unsplash.com/photo-1524508762098-fd966ffb6ef9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "diverse kids"
+    },
+    {
+      "id": "resource-hub",
+      "description": "A child looking at a tablet with educational apps.",
+      "imageUrl": "https://images.unsplash.com/photo-1616499351442-7a0a65c9545a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "child learning tablet"
+    },
+    {
+      "id": "contact-us",
+      "description": "A colorful wall of mailboxes.",
+      "imageUrl": "https://images.unsplash.com/photo-1594944635677-50a3b2e5927c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "colorful mailboxes"
+    }
+  ]
+}
