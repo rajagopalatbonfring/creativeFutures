@@ -15,30 +15,17 @@ export function FloatingNavbar() {
 
     return (
         <motion.nav
-            className="fixed top-4 inset-x-0 mx-auto w-max py-2 px-3 bg-background/80 backdrop-blur-lg z-50 rounded-full shadow-lg border"
+            className="fixed top-4 inset-x-0 mx-auto max-w-7xl  z-50"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, type: 'spring', stiffness: 120, damping: 20 }}
         >
             <div className="flex justify-between items-center gap-4">
-                <Link href="/" className="flex items-center gap-2.5 font-headline text-lg font-bold text-foreground pl-2">
-                     <svg
-                      className="h-6 w-6 text-primary"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                      <path d="M2 17l10 5 10-5" />
-                      <path d="M2 12l10 5 10-5" />
-                    </svg>
+                <Link href="/" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-foreground ">
                     <span className="hidden sm:inline">Creative Futures</span>
                 </Link>
 
-                <div className="hidden md:flex gap-1">
+                <div className="hidden md:flex gap-1 py-2 px-3 bg-background/80 backdrop-blur-lg rounded-full shadow-lg border">
                     {navItems.map((item) => (
                         <Link
                             key={item.href}
