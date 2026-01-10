@@ -15,7 +15,7 @@ export function FloatingNavbar() {
 
     return (
         <motion.nav
-            className="fixed top-4 inset-x-0 mx-auto max-w-7xl  z-50"
+            className="fixed top-8 inset-x-0 mx-auto max-w-7xl z-50"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, type: 'spring', stiffness: 120, damping: 20 }}

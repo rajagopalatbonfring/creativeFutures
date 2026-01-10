@@ -7,7 +7,9 @@ import { AgeGroupCard } from '@/components/age-group-card';
 import { CategoryCard } from '@/components/category-card';
 import { ResourceCard } from '@/components/resource-card';
 import { StepCard } from '@/components/step-card';
+import FishIcon from '@/components/fishIcon';
 import { ageGroups, categories, resources, submissionSteps } from '@/lib/home-page-data';
+import img from "../images/bgbgbg.jpg";
 
 export default function Home() {
 
@@ -49,6 +51,10 @@ export default function Home() {
     <div className="creative-futures-container">
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center text-center p-4 overflow-hidden bg-background">
+          {/* <div 
+            className="absolute inset-0 opacity-40"
+            style={{ backgroundImage: `url(${img.src})`, backgroundRepeat:"no-repeat", backgroundSize:"contain", backgroundPosition:"center" }}
+          ></div> */}
         <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white_0%,transparent_100%)]"></div>
         <div className="relative z-10 flex flex-col items-center">
             <motion.h1
@@ -122,6 +128,8 @@ export default function Home() {
             ))}
         </div>
       </Section>
+
+      
 
       {/* Submission Process */}
       <Section id="submit" className="bg-muted/50">

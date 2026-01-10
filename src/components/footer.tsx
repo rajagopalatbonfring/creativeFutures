@@ -6,7 +6,7 @@ import { FaInstagram, FaTwitter, FaFacebook, FaYoutube, FaGraduationCap, FaSchoo
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--soft-indigo)] text-white pt-12 pb-6 px-4 md:px-8 mt-16 border-t-4 border-[var(--soft-pink)]">
+    <footer className="relative z-10 bg-[var(--soft-indigo)] text-white pt-12 pb-6 px-4 md:px-8 mt-16 border-t-4 border-[var(--soft-pink)]">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         <div className="footer-section">
           <h3 className="text-xl mb-5 text-white font-headline pb-2 border-b-2 border-white/20">Creative Kids</h3>
