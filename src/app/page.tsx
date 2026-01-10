@@ -104,7 +104,7 @@ export default function Home() {
       </Section>
 
       {/* Activity Categories */}
-      <Section id="activities" className="bg-muted/50">
+      <Section id="activities" className="bg-muted/10 rounded-2xl">
         <SectionHeader title="Explore Creative Categories" subtitle="No matter what you love, there's a category for you to shine." />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => (
@@ -132,7 +132,7 @@ export default function Home() {
       
 
       {/* Submission Process */}
-      <Section id="submit" className="bg-muted/50">
+      <Section id="submit" className="bg-muted/10 rounded-2xl">
         <SectionHeader title="Share Your Work in 3 Easy Steps!" subtitle="Show the world what you've created." />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto my-12">
             {submissionSteps.map((step, i) => (
