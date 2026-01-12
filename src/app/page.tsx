@@ -8,6 +8,7 @@ import { CategoryCard } from '@/components/category-card';
 import { ResourceCard } from '@/components/resource-card';
 import { StepCard } from '@/components/step-card';
 import FishIcon from '@/components/fishIcon';
+import SectionFish from '@/components/sectionfish';
 import { ageGroups, categories, resources, submissionSteps } from '@/lib/home-page-data';
 import img from "../images/bgbgbg.jpg";
 
@@ -17,7 +18,8 @@ export default function Home() {
     return (
       <section
         id={id}
-        className={`py-16 sm:my-24 px-4 md:px-8 max-w-7xl mx-auto ${className}`}
+        className={`relative py-16 sm:my-24 px-4 md:px-8 min-h-[100vh] max-h-[100%] mx-auto flex flex-col items-center justify-center ${className}`}
+
       >
         {children}
       </section>
@@ -25,7 +27,7 @@ export default function Home() {
   };
 
   const SectionHeader = ({ title, subtitle }: { title: string, subtitle: string }) => (
-    <div className="text-center mb-12">
+    <div className="relative z-2 text-center mb-12">
       <motion.h2 
         className="text-4xl md:text-5xl font-headline text-foreground mb-3"
         initial={{ opacity: 0, y: 20 }}
@@ -92,6 +94,11 @@ export default function Home() {
 
       {/* Age Groups Section */}
       <Section id="ages">
+        <SectionFish 
+            colorScheme={['#ffb7f5', '#ff9bf5', '#ff69b4', '#db7093']}
+            position="bottom"
+            direction="left-to-right"
+          />
         <SectionHeader title="Find Your Age Group" subtitle="Pick your age and discover fun activities just for you!" />
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
           {ageGroups.map((group) => (
@@ -104,7 +111,12 @@ export default function Home() {
       </Section>
 
       {/* Activity Categories */}
-      <Section id="activities" className="bg-muted/10 rounded-2xl">
+      <Section id="activities" className="">
+        <SectionFish 
+            colorScheme={['#a3e635', '#84cc16', '#65a30d', '#4d7c0f']}
+            position="top"
+            direction="right-to-left"
+          />
         <SectionHeader title="Explore Creative Categories" subtitle="No matter what you love, there's a category for you to shine." />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => (
@@ -115,8 +127,12 @@ export default function Home() {
 
       {/* Resource Hub */}
       <Section id="resources">
+        <SectionFish 
+          colorScheme={['#fbbf24', '#f59e0b', '#fb923c', '#ea580c']}
+          position="top"
+        />
         <SectionHeader title="Spark Your Imagination" subtitle="Need ideas? Download our free activities and resource kits!" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {resources.map((resource, i) => (
                  <ResourceCard
                     key={i}
@@ -132,7 +148,10 @@ export default function Home() {
       
 
       {/* Submission Process */}
-      <Section id="submit" className="bg-muted/10 rounded-2xl">
+      <Section id="submit" className="">
+        <SectionFish
+          colorScheme={['#60a5fa', '#3b82f6', '#2563eb', '#1d4ed8']}
+        />
         <SectionHeader title="Share Your Work in 3 Easy Steps!" subtitle="Show the world what you've created." />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto my-12">
             {submissionSteps.map((step, i) => (

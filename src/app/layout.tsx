@@ -53,7 +53,7 @@ import { Providers } from '@/app/providers';
 import { Toaster } from '@/components/ui/toaster';
 import { Footer } from '@/components/footer';
 import { FloatingNavbar } from '@/components/floating-navbar';
-import { FishBackground } from '@/components/fishbackground';
+import { WaterBackground } from '@/components/fishbackground';
 
 export const metadata: Metadata = {
   title: 'Creative Futures: A Journal By and For Kids',
@@ -77,7 +77,7 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
-          <FishBackground /> {/* Add fish background here */}
+          <WaterBackground /> {/* Add fish background here */}
           <FloatingNavbar />
           <main className="relative z-10">{children}</main> {/* Add z-index to keep content above fish */}
           <Footer />
