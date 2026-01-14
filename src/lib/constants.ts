@@ -64,9 +64,24 @@ export const activities: Activity[] = [
     category: 'young-pen',
     ageGroup: '13-14',
     imageId: 'activity-comic'
+  },
+  {
+    id: 'kindness-story',
+    title: 'Share a Kindness Story',
+    description: 'Write about a time you helped someone or someone helped you. Let\'s spread positivity!',
+    category: 'kindness-corner',
+    ageGroup: '7-8',
+    imageId: 'submission-2'
+  },
+  {
+    id: 'cultural-tale',
+    title: 'Tell a Cultural Tale',
+    description: 'Share a folktale or a traditional story from your culture. You can write it or record it!',
+    category: 'colourful-cultures',
+    ageGroup: '9-10',
+    imageId: 'submission-3'
   }
 ];
-
 export const featuredSubmissions: Submission[] = [
   {
     id: 'sub-1',

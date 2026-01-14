@@ -28,7 +28,7 @@ export default function SubmitPage() {
   }
 
   return (
-    <div className="relative bg-primary/10">
+    <div className="relative bg-primary/10 py-24">
       <div className="container mx-auto max-w-2xl px-4 py-12 md:px-6 relative z-10">
         <div className="relative z-10">
           <div className="mb-8 text-center">

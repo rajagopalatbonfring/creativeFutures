@@ -7,7 +7,7 @@ import { featuredSubmissions } from '@/lib/constants';
 export default function GalleryPage() {
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center py-24">
         <section className="w-full py-16 md:py-24 relative">
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <motion.div
