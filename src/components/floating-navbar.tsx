@@ -240,7 +240,7 @@ export function FloatingNavbar() {
     return (
         <header className="fixed top-6 left-0 right-0 z-50 px-4">
             <div className="container max-w-7xl mx-auto">
-                <div className="bg-white rounded-full shadow-2xl border-4 border-black px-6 py-3 flex items-center justify-between">
+                <div className="bg-white rounded-full shadow-2xl border-2 border-black px-6 py-3 flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2 group">
                         <div className="relative">
@@ -269,7 +269,7 @@ export function FloatingNavbar() {
                           <DropdownMenuTrigger className="font-bold text-sm text-gray-700 px-4 py-2 rounded-full hover:bg-[#FBC51A] hover:text-black transition-all outline-none flex items-center gap-1">
                             More <ChevronDown className="w-4 h-4" />
                           </DropdownMenuTrigger>
-                          <DropdownMenuContent className="bg-white rounded-3xl border-4 border-black shadow-2xl p-2 mt-2">
+                          <DropdownMenuContent className="bg-white rounded-3xl border-2 border-black shadow-2xl p-2 mt-2">
                             {navItems.slice(4).map((item) => (
                                <DropdownMenuItem 
                                  key={item.href} 
@@ -304,7 +304,7 @@ export function FloatingNavbar() {
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent 
                                   align="end" 
-                                  className="bg-white rounded-3xl border-4 border-black shadow-2xl p-2 w-72 mt-2"
+                                  className="bg-white rounded-3xl border-2 border-black shadow-2xl p-2 w-72 mt-2"
                                 >
                                 {navItems.map((item) => (
                                    <DropdownMenuItem 

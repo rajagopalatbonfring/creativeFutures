@@ -84,7 +84,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Heart, Send, MapPin } from 'lucide-react';
+import { Heart, Send, MapPin,Twitter,Instagram,Facebook } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function Footer() {
@@ -130,14 +130,14 @@ export function Footer() {
                   Where imagination meets creativity! 🚀
                 </p>
                 <div className="flex gap-3">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#FB0091] font-bold cursor-pointer hover:scale-110 transition-transform">
-                    F
+                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#FB0091] cursor-pointer hover:scale-110 transition-transform">
+                    <Facebook className="w-5 h-5" />
                   </div>
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#00B4EE] font-bold cursor-pointer hover:scale-110 transition-transform">
-                    T
+                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#00B4EE] cursor-pointer hover:scale-110 transition-transform">
+                    <Twitter className="w-5 h-5" />
                   </div>
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#FBC51A] font-bold cursor-pointer hover:scale-110 transition-transform">
-                    I
+                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#FBC51A] cursor-pointer hover:scale-110 transition-transform">
+                    <Instagram className="w-5 h-5" />
                   </div>
                 </div>
               </div>

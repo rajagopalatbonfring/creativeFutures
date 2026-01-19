@@ -77,8 +77,6 @@ export default function SubmissionsPage() {
     <div className="bg-white overflow-hidden">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl -translate-x-1/3"></div>
 
         <svg className="absolute top-48 right-24 w-28 h-18 opacity-30" viewBox="0 0 100 50">
           <path d="M20,35 Q15,35 15,30 Q15,25 20,25 Q20,20 25,20 Q30,20 30,25 Q35,25 35,30 Q35,35 30,35 Z" fill="#FBC51A"/>
@@ -139,7 +137,7 @@ export default function SubmissionsPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Card className="border-0 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer overflow-hidden">
-                    <div className={`h-2 bg-gradient-to-r ${format.color}`}></div>
+                    {/* <div className={`h-2 bg-gradient-to-r ${format.color}`}></div> */}
                     <CardContent className="pt-8 pb-8 text-center">
                       <div className="text-5xl mb-4">{format.emoji}</div>
                       <div className="flex items-center justify-center gap-2">

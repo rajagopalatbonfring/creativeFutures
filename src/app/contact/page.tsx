@@ -223,9 +223,9 @@ export default function ContactPage() {
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
                 {/* Decorative Blobs */}
-                <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                {/* <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
                 <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl translate-x-1/3"></div>
-                <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
 
                 {/* Cloud SVGs */}
                 <svg className="absolute top-24 left-16 w-24 h-16 opacity-40" viewBox="0 0 100 50">
@@ -292,7 +292,7 @@ export default function ContactPage() {
             </section>
 
             {/* Form Section */}
-            <section className="py-24 bg-gradient-to-br from-[#00B4EE]/5 to-[#FB0091]/5 relative">
+            <section className="py-24 bg-gradient-to-b from-[#00B4EE]/5 to-white relative">
                 <div className="absolute top-0 left-0 right-0">
                     <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-32 rotate-180">
                         <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="white"/>
@@ -300,8 +300,8 @@ export default function ContactPage() {
                 </div>
 
                 {/* Decorative Blobs */}
-                <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
-                <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div>
+                {/* <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
+                <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div> */}
 
                 <div className="container mx-auto px-4 relative z-10 pt-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -312,7 +312,7 @@ export default function ContactPage() {
                             transition={{ duration: 0.7 }}
                         >
                             <Card className="border-0 shadow-2xl bg-white overflow-hidden">
-                                <div className="h-2 bg-gradient-to-r from-[#FB0091] via-[#00B4EE] to-[#FBC51A]"></div>
+                                {/* <div className="h-2 bg-gradient-to-r from-[#FB0091] via-[#00B4EE] to-[#FBC51A]"></div> */}
                                 <CardHeader className="bg-gradient-to-br from-gray-50 to-white pb-6">
                                     <div className="text-5xl mb-3">📬</div>
                                     <CardTitle className="font-headline text-3xl font-black">Send us a Message</CardTitle>
@@ -410,7 +410,7 @@ export default function ContactPage() {
                             transition={{ duration: 0.7 }}
                             className="relative"
                         >
-                            <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
+                            {/* <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
                             <div className="relative w-full min-h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#00B4EE]/20">
                                 {contactImage ? (
                                     <Image

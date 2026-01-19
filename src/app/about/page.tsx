@@ -282,8 +282,8 @@ export default function AboutPage() {
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
                 {/* Decorative Blobs */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl -translate-x-1/3"></div>
+                {/* <div className="absolute top-0 right-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl -translate-x-1/3"></div> */}
 
                 {/* Cloud SVGs */}
                 <svg className="absolute top-32 left-20 w-24 h-16 opacity-40" viewBox="0 0 100 50">
@@ -334,7 +334,7 @@ export default function AboutPage() {
                             transition={{ duration: 0.6 }}
                             className="relative"
                         >
-                            <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
+                            {/* <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
                             {missionImage ? (
                                 <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#FB0091]/20">
                                     <Image src={missionImage.imageUrl} alt={missionImage.description} data-ai-hint={missionImage.imageHint} fill className="object-cover" />
@@ -373,7 +373,7 @@ export default function AboutPage() {
                     </svg>
                 </div>
 
-                <div className="container mx-auto px-4 pt-16">
+                <div className="container mx-auto px-4 py-28">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -468,8 +468,8 @@ export default function AboutPage() {
                 </div>
 
                 {/* Decorative Blobs */}
-                <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
-                <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div>
+                {/* <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
+                <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div> */}
 
                 <div className="container mx-auto px-4 relative z-10 pt-16">
                     <motion.div
@@ -494,7 +494,7 @@ export default function AboutPage() {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
                                 <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group cursor-pointer hover:-translate-y-2 bg-white">
-                                    <div className={`h-3 bg-gradient-to-r ${zone.color}`}></div>
+                                    {/* <div className={`h-3 bg-gradient-to-r ${zone.color}`}></div> */}
                                     <CardHeader className="text-center pt-6">
                                         <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                                             {zone.emoji}

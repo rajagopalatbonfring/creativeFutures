@@ -272,9 +272,9 @@ export default function Home() {
       {/* Hero Section with Blob Background */}
       <section id="home" className="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
         {/* Decorative Blobs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        {/* <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
         
         {/* Cloud SVGs */}
         <svg className="absolute top-20 left-10 w-24 h-16 opacity-40" viewBox="0 0 100 50">
@@ -324,11 +324,10 @@ export default function Home() {
             {heroImage && (
               <div className="relative aspect-square rounded-full overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#FBC51A]/30">
                 <Image
-                  src={heroImage.imageUrl}
+                  src="/homeimg.jpg"
                   alt={heroImage.description}
                   fill
                   className="object-cover"
-                  data-ai-hint={heroImage.imageHint}
                 />
               </div>
             )}
@@ -353,7 +352,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
+            {/* <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
             <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#00B4EE]/20">
               <Image 
                 src="https://picsum.photos/seed/mission/600/400" 
@@ -406,7 +405,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group cursor-pointer hover:-translate-y-2">
-                  <div className={`h-3 bg-gradient-to-r ${zone.color}`}></div>
+                  {/* <div className={`h-3 bg-gradient-to-r ${zone.color}`}></div> */}
                   <CardHeader className="text-center pt-8">
                     <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                       {zone.emoji}
@@ -457,8 +456,8 @@ export default function Home() {
       {/* Submission Process with Blob Background */}
       <section id="submit" className="relative bg-gradient-to-br from-[#FBC51A]/10 via-[#FB0091]/5 to-[#00B4EE]/10 mx-auto">
         {/* Decorative Blobs */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div>
+        {/* <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div> */}
 
         <div className="absolute top-0 left-0 right-0">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-32 rotate-180">
@@ -512,8 +511,6 @@ export default function Home() {
 
       {/* Call to Action with Blob Background */}
       <Section id="cta" className="bg-white relative">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
 
         {/* Stars */}
         <Star className="absolute top-10 left-10 w-8 h-8 text-[#FBC51A] animate-pulse" />

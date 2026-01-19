@@ -92,9 +92,9 @@ export default function ParticipantCategoryPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
         {/* Decorative Blobs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        {/* <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
 
         {/* Cloud SVGs */}
         <svg className="absolute top-24 left-16 w-24 h-16 opacity-40" viewBox="0 0 100 50">
@@ -161,14 +161,16 @@ export default function ParticipantCategoryPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group cursor-pointer hover:-translate-y-2 bg-white">
-                  <div className={`h-3 bg-gradient-to-r ${group.gradient}`}></div>
+                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-black/5 overflow-hidden group cursor-pointer hover:-translate-y-2 bg-white">
+                  {/* <div className={`h-3 bg-gradient-to-r ${group.gradient}`}></div> */}
                   <CardHeader className="text-center pt-8">
                     <div className="text-7xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                       {group.emoji}
                     </div>
-                    <div className={`inline-block ${group.color} px-4 py-2 rounded-full text-sm font-black mb-3`}>
-                      Ages {group.age}
+                    <div className='pb-3'>
+                      <span className={`${group.color} px-4 py-2 rounded-full text-sm font-black`}>
+                        Ages {group.age}
+                      </span>
                     </div>
                     <CardTitle className="font-headline text-2xl font-bold mb-2">{group.stage}</CardTitle>
                     <CardDescription className="text-base text-gray-600 leading-relaxed">
@@ -191,10 +193,10 @@ export default function ParticipantCategoryPage() {
         </div>
 
         {/* Decorative Blobs */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
-        <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div>
+        {/* <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
+        <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div> */}
 
-        <div className="container mx-auto px-4 relative z-10 pt-16">
+        <div className="container mx-auto px-4 relative z-10 py-28">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -203,7 +205,6 @@ export default function ParticipantCategoryPage() {
               transition={{ duration: 0.5 }}
             >
               <Card className="border-0 shadow-2xl bg-white overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-[#FB0091] via-[#00B4EE] to-[#FBC51A]"></div>
                 <CardHeader className="text-center bg-gradient-to-br from-gray-50 to-white pb-8">
                   <div className="text-6xl mb-4">🎯</div>
                   <CardTitle className="font-headline text-3xl font-black mb-3">

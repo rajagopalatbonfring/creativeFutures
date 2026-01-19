@@ -214,9 +214,9 @@ export default function ResourcesPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
         {/* Decorative Blobs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        {/* <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
 
         {/* Cloud SVGs */}
         <svg className="absolute top-24 left-16 w-24 h-16 opacity-40" viewBox="0 0 100 50">
@@ -284,7 +284,7 @@ export default function ResourcesPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="text-center border-0 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer h-full bg-white overflow-hidden">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-[#FBC51A]/20 rounded-bl-full"></div>
+                  {/* <div className="absolute top-0 right-0 w-20 h-20 bg-[#FBC51A]/20 rounded-bl-full"></div> */}
                   <CardHeader className="pt-8">
                     <div className="text-6xl mb-4">{step.emoji}</div>
                     <div className={`inline-flex items-center justify-center w-12 h-12 ${step.color} text-white rounded-full text-xl font-black mb-4 shadow-lg`}>
@@ -309,10 +309,10 @@ export default function ResourcesPage() {
         </div>
 
         {/* Decorative Blobs */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
-        <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div>
+        {/* <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
+        <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div> */}
 
-        <div className="container mx-auto px-4 relative z-10 pt-16">
+        <div className="container mx-auto px-4 relative z-10 py-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -338,7 +338,7 @@ export default function ResourcesPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="flex flex-col h-full hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group cursor-pointer hover:-translate-y-2 bg-white">
-                  <div className={`h-3 bg-gradient-to-r ${resource.color}`}></div>
+                
                   <CardHeader className="flex-row items-start gap-4 pt-8">
                     <div className="text-5xl transform group-hover:scale-110 transition-transform duration-300">
                       {resource.emoji}
@@ -377,10 +377,7 @@ export default function ResourcesPage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <Card className="text-center bg-gradient-to-br from-[#FB0091] to-pink-500 text-white border-0 shadow-2xl overflow-hidden relative">
-              {/* Decorative elements */}
-              <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-[#FBC51A]/20 rounded-full blur-2xl"></div>
+            <div className="text-center relative">
 
               <CardContent className="pt-16 pb-16 relative z-10">
                 <div className="text-7xl mb-6">🎉</div>
@@ -396,7 +393,7 @@ export default function ResourcesPage() {
                   </Link>
                 </Button>
               </CardContent>
-            </Card>
+            </div>
           </motion.div>
         </div>
       </section>
