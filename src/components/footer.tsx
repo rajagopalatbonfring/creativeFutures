@@ -121,13 +121,15 @@ export function Footer() {
               {/* Brand Section */}
               <div>
                 <Link href="/" className="flex items-center gap-2 mb-4">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center font-black text-[#FB0091] text-xl shadow-xl">
-                        CF
+                    <div className="relative">
+                        <div className="w-12 h-12 bg-gradient-to-br from-gray-200 via-[#00B4EE] to-gray-200 rounded-full flex items-center justify-center font-black text-white text-xl shadow-lg group-hover:scale-105 transition-transform">
+                            CF
+                        </div>
                     </div>
                 </Link>
-                <h3 className="font-black text-2xl mb-3">Creative Futures</h3>
+                <h3 className="font-black text-2xl mb-0">Creative Futures</h3>
                 <p className="text-white/90 text-sm leading-relaxed mb-4">
-                  Where imagination meets creativity! 🚀
+                  Where imagination meets creativity!
                 </p>
                 <div className="flex gap-3">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#FB0091] cursor-pointer hover:scale-110 transition-transform">

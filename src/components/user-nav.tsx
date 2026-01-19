@@ -51,7 +51,7 @@ export function UserNav() {
         <Button asChild variant="ghost">
           <Link href="/login">Log In</Link>
         </Button>
-        <Button asChild>
+        <Button asChild variant="secondary">
           <Link href="/signup">Sign Up</Link>
         </Button>
       </div>

@@ -277,6 +277,16 @@ export default function AboutPage() {
     const missionImage = PlaceHolderImages.find(img => img.id === 'about-mission');
     const visionImage = PlaceHolderImages.find(img => img.id === 'about-vision');
 
+    const Section = ({ children, id, className }: { children: React.ReactNode, id: string, className?: string }) => {
+    return (
+        <section id={id} className={`relative py-16 sm:py-24 ${className}`}>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+            {children}
+        </div>
+        </section>
+    );
+    };
+
     return (
         <div className="bg-white overflow-hidden">
             {/* Hero Section */}
@@ -335,15 +345,15 @@ export default function AboutPage() {
                             className="relative"
                         >
                             {/* <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
-                            {missionImage ? (
-                                <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#FB0091]/20">
-                                    <Image src={missionImage.imageUrl} alt={missionImage.description} data-ai-hint={missionImage.imageHint} fill className="object-cover" />
-                                </div>
-                            ) : (
-                                <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#FB0091]/20">
-                                    <Image src="https://picsum.photos/seed/mission/600/600" alt="Mission" fill className="object-cover" />
-                                </div>
-                            )}
+                            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#00B4EE]/20">
+                            <Image 
+                                src="https://picsum.photos/seed/mission/600/400" 
+                                alt="Kids collaborating on creative projects" 
+                                fill 
+                                className="object-cover" 
+                                data-ai-hint="kids working together on creative projects"
+                            />
+                            </div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
@@ -363,15 +373,6 @@ export default function AboutPage() {
                         </motion.div>
                     </div>
                 </div>
-            </section>
-
-            {/* Vision Section */}
-            <section className="py-24 bg-gradient-to-br from-[#00B4EE]/5 to-[#FB0091]/5 relative">
-                <div className="absolute top-0 left-0 right-0">
-                    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-32 rotate-180">
-                        <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="white"/>
-                    </svg>
-                </div>
 
                 <div className="container mx-auto px-4 py-28">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -380,7 +381,7 @@ export default function AboutPage() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="md:order-2"
+                            className="md:order-1"
                         >
                             <h2 className="text-4xl md:text-5xl font-headline font-black mb-6">
                                 Our <span className="text-[#00B4EE]">Vision</span>
@@ -393,23 +394,81 @@ export default function AboutPage() {
                             </p>
                         </motion.div>
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
+                            initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="relative md:order-1"
+                            className="relative md:order-2"
                         >
-                            <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#00B4EE]/20 rounded-full blur-3xl"></div>
-                            {visionImage ? (
-                                <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#00B4EE]/20">
-                                    <Image src={visionImage.imageUrl} alt={visionImage.description} data-ai-hint={visionImage.imageHint} fill className="object-cover" />
-                                </div>
-                            ) : (
-                                <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#00B4EE]/20">
-                                    <Image src="https://picsum.photos/seed/vision/600/600" alt="Vision" fill className="object-cover" />
-                                </div>
-                            )}
+                            {/* <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
+                            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#00B4EE]/20">
+                            <Image 
+                                src="https://picsum.photos/seed/mission/600/400" 
+                                alt="Kids collaborating on creative projects" 
+                                fill 
+                                className="object-cover" 
+                                data-ai-hint="kids working together on creative projects"
+                            />
+                            </div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            {/* Activity Zones */}
+            <section className="py-24 bg-gradient-to-br from-[#FBC51A]/10 via-[#FB0091]/5 to-[#00B4EE]/10 relative">
+                <div className="absolute top-0 left-0 right-0">
+                    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-32 rotate-180">
+                        <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="white"/>
+                    </svg>
+                </div>
+
+                <div className="container mx-auto px-4 relative z-10 py-24">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-headline font-black mb-4">
+                            Activity <span className="text-[#FB0091]">Zones</span>
+                        </h2>
+                        <p className="text-lg text-gray-600">Discover all the creative spaces we offer 🎨</p>
+                    </motion.div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {activityZones.map((zone, index) => (
+                            <motion.div
+                                key={zone.title}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group cursor-pointer hover:-translate-y-2 bg-white">
+                                    {/* <div className={`h-3 bg-gradient-to-r ${zone.color}`}></div> */}
+                                    <CardHeader className="text-center pt-6">
+                                        <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                                            {zone.emoji}
+                                        </div>
+                                        <CardTitle className="font-headline text-2xl font-bold mb-4">{zone.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <ul className="text-gray-600 text-sm space-y-2 text-left">
+                                            {zone.activities.map(activity => (
+                                                <li key={activity} className="flex items-start gap-2">
+                                                    <span className="text-black mt-1 font-bold">•</span>
+                                                    <span>{activity}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
 
@@ -459,64 +518,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Activity Zones */}
-            <section className="py-24 bg-gradient-to-br from-[#FBC51A]/10 via-[#FB0091]/5 to-[#00B4EE]/10 relative">
-                <div className="absolute top-0 left-0 right-0">
-                    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-32 rotate-180">
-                        <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="white"/>
-                    </svg>
-                </div>
 
-                {/* Decorative Blobs */}
-                {/* <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
-                <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div> */}
-
-                <div className="container mx-auto px-4 relative z-10 pt-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        className="text-center mb-16"
-                    >
-                        <h2 className="text-4xl md:text-5xl font-headline font-black mb-4">
-                            Activity <span className="text-[#FB0091]">Zones</span>
-                        </h2>
-                        <p className="text-lg text-gray-600">Discover all the creative spaces we offer 🎨</p>
-                    </motion.div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        {activityZones.map((zone, index) => (
-                            <motion.div
-                                key={zone.title}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group cursor-pointer hover:-translate-y-2 bg-white">
-                                    {/* <div className={`h-3 bg-gradient-to-r ${zone.color}`}></div> */}
-                                    <CardHeader className="text-center pt-6">
-                                        <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                                            {zone.emoji}
-                                        </div>
-                                        <CardTitle className="font-headline text-2xl font-bold mb-4">{zone.title}</CardTitle>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <ul className="text-gray-600 text-sm space-y-2 text-left">
-                                            {zone.activities.map(activity => (
-                                                <li key={activity} className="flex items-start gap-2">
-                                                    <span className="text-black mt-1 font-bold">•</span>
-                                                    <span>{activity}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </CardContent>
-                                </Card>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
         </div>
     );
 }
