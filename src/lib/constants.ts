@@ -82,6 +82,11 @@ export const activities: Activity[] = [
     imageId: 'submission-3'
   }
 ];
+
+
+
+
+
 export const featuredSubmissions: Submission[] = [
   {
     id: 'sub-1',
@@ -92,6 +97,7 @@ export const featuredSubmissions: Submission[] = [
     activityTitle: 'Paint the World',
     imageId: 'submission-1',
     description: "My drawing of a T-Rex visiting a new planet.",
+    mediaType: 'image',
   },
   {
     id: 'sub-2',
@@ -102,6 +108,7 @@ export const featuredSubmissions: Submission[] = [
     activityTitle: 'Story Time Adventures',
     imageId: 'submission-2',
     description: "A story about a lost star finding its way home.",
+    mediaType: 'text',
   },
   {
     id: 'sub-3',
@@ -112,6 +119,7 @@ export const featuredSubmissions: Submission[] = [
     activityTitle: 'Clay Creations',
     imageId: 'submission-3',
     description: "This is Blobby. He is a friendly robot from the future.",
+    mediaType: 'image',
   },
   {
     id: 'sub-4',
@@ -122,5 +130,39 @@ export const featuredSubmissions: Submission[] = [
     activityTitle: 'Paint the World',
     imageId: 'submission-4',
     description: "A fish I met in my dream. His name is Bubbles.",
+    mediaType: 'image',
   },
+  {
+    id: 'sub-5',
+    title: 'Jungle Beat',
+    author: 'Alex, Age 8',
+    authorId: 'user-5',
+    activityId: 'make-some-noise',
+    activityTitle: 'Make Some Noise!',
+    imageId: 'activity-music',
+    description: "I made a song using pots and pans. It sounds like a jungle!",
+    mediaType: 'audio',
+  },
+  {
+    id: 'sub-6',
+    title: 'My First Short Film',
+    author: 'Zoe, Age 12',
+    authorId: 'user-6',
+    activityId: 'sing-dance-shine',
+    activityTitle: 'Sing Dance Shine',
+    imageId: 'activity-photography',
+    description: "A short movie about my dog's secret life.",
+    mediaType: 'video',
+  },
+   {
+    id: 'sub-7',
+    title: 'The Poem of the Tree',
+    author: 'Liam, Age 11',
+    authorId: 'user-7',
+    activityId: 'story-time-adventures',
+    activityTitle: 'Story Time Adventures',
+    imageId: 'activity-writing',
+    description: "This is a poem I wrote about the big oak tree in my backyard.",
+    mediaType: 'text',
+  }
 ];

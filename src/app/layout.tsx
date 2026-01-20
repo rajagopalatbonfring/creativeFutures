@@ -50,6 +50,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Providers } from '@/app/providers';
+import { AuthProvider } from '@/lib/auth-provider';  // ← this should point to the mock file
 import { Toaster } from '@/components/ui/toaster';
 import { Footer } from '@/components/footer';
 import { FloatingNavbar } from '@/components/floating-navbar';
@@ -77,11 +78,13 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
-          {/* <WaterBackground /> Add fish background here */}
-          <FloatingNavbar />
-          <main className="relative z-10">{children}</main> {/* Add z-index to keep content above fish */}
-          <Footer />
-          <Toaster />
+          <AuthProvider>
+            {/* <WaterBackground /> Add fish background here */}
+            <FloatingNavbar />
+            <main className="relative z-10">{children}</main> {/* Add z-index to keep content above fish */}
+            <Footer />
+            <Toaster />
+          </AuthProvider>
         </Providers>
       </body>
     </html>

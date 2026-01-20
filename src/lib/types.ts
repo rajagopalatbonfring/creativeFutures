@@ -41,6 +41,7 @@ export type Submission = {
   imageId: string;
   description?: string;
   fileUrl?: string;
+  mediaType?: 'image' | 'video' | 'audio' | 'text';
 };
 
 export type UserProfile = {

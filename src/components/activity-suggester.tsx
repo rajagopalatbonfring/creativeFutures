@@ -6,8 +6,8 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { Lightbulb, Loader2, Sparkles, Wand2 } from 'lucide-react';
 
-import { useAuth } from '@/lib/auth';
-import { suggestRelevantActivities } from '@/ai/flows/suggest-relevant-activities';
+import { useAuth } from '@/lib/auth-provider';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
