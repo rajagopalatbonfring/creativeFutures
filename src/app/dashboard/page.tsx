@@ -295,7 +295,6 @@ export default function DashboardPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Card className="border-0 shadow-lg overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-[#FB0091] to-pink-400"></div>
                 <CardContent className="pt-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -305,6 +304,7 @@ export default function DashboardPage() {
                     <FilePlus2 className="w-12 h-12 text-[#FB0091]/20" />
                   </div>
                 </CardContent>
+                <div className="h-2 bg-gradient-to-r from-[#FB0091] to-pink-400"></div>
               </Card>
             </motion.div>
 
@@ -314,7 +314,6 @@ export default function DashboardPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Card className="border-0 shadow-lg overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-[#00B4EE] to-cyan-400"></div>
                 <CardContent className="pt-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -324,6 +323,7 @@ export default function DashboardPage() {
                     <Eye className="w-12 h-12 text-[#00B4EE]/20" />
                   </div>
                 </CardContent>
+                <div className="h-2 bg-gradient-to-r from-[#00B4EE] to-cyan-400"></div>
               </Card>
             </motion.div>
 
@@ -333,7 +333,6 @@ export default function DashboardPage() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Card className="border-0 shadow-lg overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-[#FBC51A] to-yellow-300"></div>
                 <CardContent className="pt-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -343,6 +342,7 @@ export default function DashboardPage() {
                     <Award className="w-12 h-12 text-[#FBC51A]/20" />
                   </div>
                 </CardContent>
+                <div className="h-2 bg-gradient-to-r from-[#FBC51A] to-yellow-300"></div>
               </Card>
             </motion.div>
           </div>
@@ -376,7 +376,7 @@ export default function DashboardPage() {
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
                 <Card className="border-0 shadow-xl">
-                  <div className="h-2 bg-gradient-to-r from-[#FB0091] via-[#00B4EE] to-[#FBC51A]"></div>
+                  <div className="h-2 bg-gradient-to-r from-[green]/90 via-[green]/70 to-[green]/50 rounded-full"></div>
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>
