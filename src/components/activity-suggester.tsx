@@ -32,32 +32,32 @@ export function ActivitySuggester() {
     defaultValues: { preferences: userProfile?.preferences || '' },
   });
 
-  const onSubmit = async (values: PreferencesFormValues) => {
-    if (!userProfile || !userProfile.ageGroup) {
-      toast({ title: 'Error', description: 'User profile not found.', variant: 'destructive' });
-      return;
-    }
-    setIsLoading(true);
-    setSuggestions([]);
-    try {
-      const result = await suggestRelevantActivities({
-        // In a real app, these would be fetched from Firestore
-        pastSubmissions: ['Made a clay dinosaur', 'Wrote a poem about the moon'],
-        statedPreferences: values.preferences,
-        ageGroup: userProfile.ageGroup,
-      });
-      setSuggestions(result.suggestedActivities);
-    } catch (error) {
-      console.error(error);
-      toast({
-        title: 'Suggestion Failed',
-        description: 'Could not get suggestions. Please try again.',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  // const onSubmit = async (values: PreferencesFormValues) => {
+  //   if (!userProfile || !userProfile.ageGroup) {
+  //     toast({ title: 'Error', description: 'User profile not found.', variant: 'destructive' });
+  //     return;
+  //   }
+  //   setIsLoading(true);
+  //   setSuggestions([]);
+  //   try {
+  //     const result = await suggestRelevantActivities({
+  //       // In a real app, these would be fetched from Firestore
+  //       pastSubmissions: ['Made a clay dinosaur', 'Wrote a poem about the moon'],
+  //       statedPreferences: values.preferences,
+  //       ageGroup: userProfile.ageGroup,
+  //     });
+  //     setSuggestions(result.suggestedActivities);
+  //   } catch (error) {
+  //     console.error(error);
+  //     toast({
+  //       title: 'Suggestion Failed',
+  //       description: 'Could not get suggestions. Please try again.',
+  //       variant: 'destructive',
+  //     });
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   return (
     <Card className="bg-background/80">
@@ -72,7 +72,7 @@ export function ActivitySuggester() {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form className="space-y-6">
             <FormField
               control={form.control}
               name="preferences"

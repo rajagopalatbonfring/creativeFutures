@@ -180,8 +180,6 @@ export default function GalleryPage() {
     <div className="bg-white overflow-hidden">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#FBC51A]/10 via-[#00B4EE]/5 to-[#FB0091]/10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#00B4EE]/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#FBC51A]/20 rounded-full blur-3xl -translate-x-1/3"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
