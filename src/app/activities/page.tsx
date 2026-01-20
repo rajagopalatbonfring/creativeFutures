@@ -1,4 +1,6 @@
 
+
+
 // // ACTIVITIES PAGE
 // 'use client';
 
@@ -16,11 +18,6 @@
 //     <div className="bg-white overflow-hidden">
 //       {/* Hero Section */}
 //       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
-//         {/* Decorative Blobs */}
-//         {/* <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-//         <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl translate-x-1/3"></div>
-//         <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
-
 //         {/* Cloud SVGs */}
 //         <svg className="absolute top-24 left-16 w-24 h-16 opacity-40" viewBox="0 0 100 50">
 //           <path d="M20,35 Q15,35 15,30 Q15,25 20,25 Q20,20 25,20 Q30,20 30,25 Q35,25 35,30 Q35,35 30,35 Z" fill="#00B4EE"/>
@@ -112,7 +109,8 @@
 
 
 
-// ACTIVITIES PAGE
+
+
 'use client';
 
 import React from 'react';
@@ -147,18 +145,17 @@ export default function ActivitiesPage() {
             <div className="inline-flex items-center gap-2 bg-white shadow-lg px-5 py-2 rounded-full text-sm font-bold mb-6 border-2 border-[#FB0091]/20">
               <Sparkles className="w-4 h-4 text-[#FB0091]" />
               <span className="bg-gradient-to-r from-[#FB0091] to-[#00B4EE] bg-clip-text text-transparent">
-                Activities
+                Parent-Child Activity Zone
               </span>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-headline font-black leading-tight mb-6">
-              Choose Your <span className="text-[#FB0091]">Adventure</span>
+              Choose Your <span className="text-[#FB0091]">Creative Adventure</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Find the perfect creative challenge for you. Explore our activities and let your imagination soar! 🚀
+              Explore permanent activities for kids & parents. Weekly challenges are shown in the Resource Hub!
             </p>
           </motion.div>
 
-          {/* Hero Image */}
           {activitiesImage && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -166,9 +163,9 @@ export default function ActivitiesPage() {
               transition={{ delay: 0.3, duration: 0.7 }}
               className="relative w-full max-w-4xl mx-auto aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#FBC51A]/30"
             >
-              <Image 
+              <Image
                 src={activitiesImage.imageUrl}
-                alt={activitiesImage.description}
+                alt={activitiesImage.description || "Activities hero"}
                 fill
                 className="object-cover"
                 data-ai-hint={activitiesImage.imageHint}
@@ -177,7 +174,6 @@ export default function ActivitiesPage() {
           )}
         </div>
 
-        {/* Wave Divider */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-32">
             <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="white"/>
@@ -196,10 +192,10 @@ export default function ActivitiesPage() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-headline font-black mb-4">
-              Explore All <span className="text-[#00B4EE]">Activities</span>
+              Core <span className="text-[#00B4EE]">Activities</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Filter by category to find activities that match your interests! 🎨
+              Filter by category to discover creative challenges for young minds!
             </p>
           </motion.div>
 

@@ -49,12 +49,6 @@
       "imageHint": "coloring page"
     },
     {
-      "id": "activity-comic",
-      "description": "A blank comic book panel template on a desk with colored pencils.",
-      "imageUrl": "https://images.unsplash.com/photo-1593438358245-7d3d27b7b12c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "comic template"
-    },
-    {
       "id": "submission-1",
       "description": "A child's watercolor painting of a colorful dinosaur.",
       "imageUrl": "https://images.unsplash.com/photo-1522069394074-14c114d7e232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMHdhdGVyY29sb3J8ZW58MHx8fHwxNzI0NDQ1MzIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
