@@ -305,7 +305,7 @@ export function FloatingNavbar() {
       { label: 'Teachers', href: '/teachers' },
       { label: 'Schools', href: '/schools' },
       { label: 'Submission Guidelines', href: '/submissions' },
-      { label: 'Gallery', href: '/gallery' },
+      { label: 'Art Gallery', href: '/gallery' },
       { label: 'Submit', href: '/submit' },
       { label: 'Recognition', href: '/recognition' },
       { label: 'Blog', href: '/blog' },

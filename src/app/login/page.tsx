@@ -71,10 +71,7 @@ export default function LoginPage() {
   return (
     <div className="w-full lg:grid lg:min-h-[calc(100vh-11rem)] lg:grid-cols-2 relative overflow-hidden bg-white">
       {/* Left Side - Form */}
-      <div className="flex items-center justify-center py-12 relative z-10 bg-gradient-to-br from-[#00B4EE]/5 via-[#FB0091]/5 to-[#FBC51A]/5">
-        {/* Decorative Blobs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+      <div className="flex items-center justify-center py-40 relative z-10 bg-gradient-to-br from-[#00B4EE]/5 via-[#FB0091]/5 to-[#FBC51A]/5">
 
         {/* Cloud SVGs */}
         <svg className="absolute top-20 right-10 w-20 h-14 opacity-30" viewBox="0 0 100 50">
@@ -116,10 +113,7 @@ export default function LoginPage() {
       </div>
 
       {/* Right Side - Image */}
-      <div className="hidden lg:block relative">
-        {/* Decorative Elements */}
-        <div className="absolute top-10 left-10 w-64 h-64 bg-[#FBC51A]/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-48 h-48 bg-[#00B4EE]/20 rounded-full blur-3xl"></div>
+      <div className="hidden lg:block relative py-40">
 
         <div className="relative h-full p-12 flex items-center justify-center">
           <div className="relative w-full h-full max-w-lg max-h-[600px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white ring-4 ring-[#FB0091]/30">

@@ -334,7 +334,7 @@ export default function AboutPage() {
             </section>
 
             {/* Mission Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white mx-auto max-w-7xl">
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <motion.div
@@ -374,7 +374,7 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                <div className="container mx-auto px-4 py-28">
+                <div className="container mx-auto px-4 pt-28">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
