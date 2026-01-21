@@ -117,6 +117,22 @@ export type Activity = {
 // ────────────────────────────────────────────────
 // Submission (updated to match new activity structure)
 // ────────────────────────────────────────────────
+// export type Submission = {
+//   id: string;
+//   title: string;
+//   author: string;
+//   authorId: string;
+//   activityId: string;
+//   activityTitle: string;
+//   imageId: string;
+//   description?: string;
+//   fileUrl?: string;
+//   mediaType?: 'image' | 'video' | 'audio' | 'text';
+//   createdAt?: number;
+// };
+
+
+// Enhanced Submission Type
 export type Submission = {
   id: string;
   title: string;
@@ -125,11 +141,24 @@ export type Submission = {
   activityId: string;
   activityTitle: string;
   imageId: string;
-  description?: string;
+  description: string;
   fileUrl?: string;
-  mediaType?: 'image' | 'video' | 'audio' | 'text';
-  createdAt?: number;
+  mediaType: 'image' | 'video' | 'audio' | 'text';
+  createdAt: number;
+  // Enhanced metadata
+  likes: number;
+  views: number;
+  duration?: string; // For video/audio (e.g., "2:30")
+  tags: string[];
+  difficulty: 'Easy' | 'Medium' | 'Hard';
+  ageGroup: string;
 };
+
+
+
+
+
+
 
 // ────────────────────────────────────────────────
 // User profile (unchanged)

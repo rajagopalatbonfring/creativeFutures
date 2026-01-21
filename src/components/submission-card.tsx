@@ -8,9 +8,8 @@
 // import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 // import { Badge } from '@/components/ui/badge';
 // import { allActivities } from '@/lib/constants';
-// import { PlayCircle, Mic, BookOpen, Image as ImageIcon } from 'lucide-react';
+// import { PlayCircle, Mic, BookOpen, Image as ImageIcon, Sparkles } from 'lucide-react';
 
-// // Activity category color mapping
 // const activityCategoryColors: Record<string, string> = {
 //   'young-pen': 'from-[#FB0091] to-pink-400',
 //   'draw-dream': 'from-[#FBC51A] to-yellow-300',
@@ -39,6 +38,8 @@
 //     ? activityCategoryColors[activity.category] || 'from-gray-400 to-gray-300'
 //     : 'from-gray-400 to-gray-300';
 
+//   const isWeekly = activity?.isSpecialChallenge ?? false;
+
 //   const media = submission.mediaType ? mediaTypeConfig[submission.mediaType] : null;
 
 //   return (
@@ -54,7 +55,6 @@
 //           bg-white group-hover:shadow-2xl relative
 //         `}
 //       >
-
 //         <div className="relative h-56 w-full overflow-hidden">
 //           {image ? (
 //             <>
@@ -76,7 +76,6 @@
 //             </div>
 //           )}
 
-//           {/* Media type badge - top right */}
 //           {media && (
 //             <div className="absolute top-3 right-3 z-20">
 //               <Badge 
@@ -104,26 +103,28 @@
 //           </p>
 //         </CardContent>
 
-//         <CardFooter className="pt-1 pb-4 px-6">
+//         <CardFooter className="pt-1 pb-4 px-6 flex flex-wrap gap-2 items-center">
 //           <Badge
 //             variant="outline"
 //             className={`bg-gradient-to-r ${categoryColor} text-white border-0 font-semibold text-xs px-3.5 py-1 rounded-full shadow-sm`}
 //           >
 //             {submission.activityTitle}
 //           </Badge>
+
+//           {/* Weekly Challenge indicator */}
+//           {isWeekly && (
+//             <Badge 
+//               className="bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 font-bold text-xs px-3 py-1 rounded-full shadow-md flex items-center gap-1"
+//             >
+//               <Sparkles className="h-3.5 w-3.5" />
+//               Weekly Challenge
+//             </Badge>
+//           )}
 //         </CardFooter>
 //       </Card>
 //     </Link>
 //   );
 // }
-
-
-
-
-
-
-
-
 
 
 
@@ -151,15 +152,6 @@ import { Badge } from '@/components/ui/badge';
 import { allActivities } from '@/lib/constants';
 import { PlayCircle, Mic, BookOpen, Image as ImageIcon, Sparkles } from 'lucide-react';
 
-const activityCategoryColors: Record<string, string> = {
-  'young-pen': 'from-[#FB0091] to-pink-400',
-  'draw-dream': 'from-[#FBC51A] to-yellow-300',
-  'sing-dance-shine': 'from-[#00B4EE] to-cyan-300',
-  'kid-scientists': 'from-purple-500 to-purple-300',
-  'colourful-cultures': 'from-orange-500 to-orange-300',
-  'kindness-corner': 'from-red-500 to-red-300'
-};
-
 const mediaTypeConfig: Record<string, { icon: React.ReactNode; label: string; bg: string }> = {
   image: { icon: <ImageIcon className="h-5 w-5" />, label: 'Image', bg: 'bg-gradient-to-r from-amber-400 to-yellow-500' },
   video: { icon: <PlayCircle className="h-5 w-5" />, label: 'Video', bg: 'bg-gradient-to-r from-purple-500 to-violet-500' },
@@ -175,11 +167,20 @@ export function SubmissionCard({ submission }: SubmissionCardProps) {
   const image = PlaceHolderImages.find((img) => img.id === submission.imageId);
   
   const activity = allActivities.find((a) => a.id === submission.activityId);
-  const categoryColor = activity?.category
-    ? activityCategoryColors[activity.category] || 'from-gray-400 to-gray-300'
-    : 'from-gray-400 to-gray-300';
-
   const isWeekly = activity?.isSpecialChallenge ?? false;
+
+  // Derive a nice color based on activity title (no category anymore)
+  const getColorFromTitle = () => {
+    const title = (activity?.title || submission.activityTitle).toLowerCase();
+    if (title.includes('story') || title.includes('book') || title.includes('idea')) return 'from-[#FB0091] to-pink-400';
+    if (title.includes('draw') || title.includes('picture') || title.includes('craft') || title.includes('model')) return 'from-[#FBC51A] to-yellow-300';
+    if (title.includes('sing') || title.includes('dance')) return 'from-[#00B4EE] to-cyan-300';
+    if (title.includes('math') || title.includes('puzzle')) return 'from-purple-500 to-purple-300';
+    if (title.includes('science') || title.includes('experiment')) return 'from-purple-500 to-purple-300';
+    return 'from-gray-500 to-gray-400'; // fallback
+  };
+
+  const badgeColor = getColorFromTitle();
 
   const media = submission.mediaType ? mediaTypeConfig[submission.mediaType] : null;
 
@@ -245,9 +246,10 @@ export function SubmissionCard({ submission }: SubmissionCardProps) {
         </CardContent>
 
         <CardFooter className="pt-1 pb-4 px-6 flex flex-wrap gap-2 items-center">
+          {/* Activity title badge with derived color */}
           <Badge
             variant="outline"
-            className={`bg-gradient-to-r ${categoryColor} text-white border-0 font-semibold text-xs px-3.5 py-1 rounded-full shadow-sm`}
+            className={`bg-gradient-to-r from-gray-500 to-gray-400 text-white border-0 font-semibold text-xs px-3.5 py-1 rounded-full shadow-sm`}
           >
             {submission.activityTitle}
           </Badge>
