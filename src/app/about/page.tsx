@@ -290,7 +290,7 @@ export default function AboutPage() {
     return (
         <div className="bg-white overflow-hidden">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
+            <section className="relative pt-40 pb-20 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
                 {/* Decorative Blobs */}
                 {/* <div className="absolute top-0 right-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
                 <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl -translate-x-1/3"></div> */}

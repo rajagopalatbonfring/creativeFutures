@@ -298,14 +298,14 @@ import { UserNav } from './user-nav';
 
 export function FloatingNavbar() {
     const navItems = [
-      { label: 'About', href: '/about' },
-      { label: 'Categories', href: '/participant-category' },
-      { label: 'Activities', href: '/activities' },
-      { label: 'Resources', href: '/resources' },
-      { label: 'Teachers', href: '/teachers' },
-      { label: 'Schools', href: '/schools' },
+      { label: 'About us', href: '/about' },
+      { label: 'Participant Category', href: '/participant-category' },
+      { label: 'Submission Gallery', href: '/gallery' },
+      { label: 'Resource Hub', href: '/resources' },
+      { label: 'Teacher’s Corner', href: '/teachers' },
+      { label: 'School corner', href: '/schools' },
+      { label: 'Parent-Child Activity Zone', href: '/activities' },
       { label: 'Submission Guidelines', href: '/submissions' },
-      { label: 'Art Gallery', href: '/gallery' },
       { label: 'Submit', href: '/submit' },
       { label: 'Recognition', href: '/recognition' },
       { label: 'Blog', href: '/blog' },
@@ -316,12 +316,7 @@ export function FloatingNavbar() {
         <header className="fixed top-6 left-0 right-0 z-50 px-4">
             <div className="container max-w-7xl mx-auto">
                 <div className="relative bg-white rounded-full shadow-2xl border-2 border-gray-200 px-7 py-4 flex items-center justify-between overflow-hidden hover:shadow-[0_12px_40px_rgba(251,0,145,0.12)] transition-shadow duration-300">
-                    
-                    {/* Subtle floating blurs like footer */}
-                    <div className="absolute top-2 right-20 w-8 h-8 bg-[#FBC51A]/10 rounded-full blur-md"></div>
-                    <div className="absolute bottom-2 right-40 w-10 h-10 bg-[#00B4EE]/10 rounded-full blur-lg"></div>
-                    <div className="absolute top-3 left-1/3 w-6 h-6 bg-[#FB0091]/10 rounded-full blur-md"></div>
-                    
+
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-3 group relative z-10">
                         <div className="relative">

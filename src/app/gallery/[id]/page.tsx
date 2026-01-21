@@ -228,7 +228,7 @@ export default function SubmissionDetailPage() {
     return (
         <div className="bg-white overflow-hidden min-h-screen">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-12 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
+            <section className="relative pt-40 pb-12 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
 
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div

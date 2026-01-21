@@ -260,7 +260,7 @@ export default function DashboardPage() {
   return (
     <div className="bg-white overflow-hidden min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-12 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
+      <section className="relative pt-40 pb-12 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
 
         <svg className="absolute top-24 right-20 w-24 h-16 opacity-30" viewBox="0 0 100 50">
           <path d="M20,35 Q15,35 15,30 Q15,25 20,25 Q20,20 25,20 Q30,20 30,25 Q35,25 35,30 Q35,35 30,35 Z" fill="#FBC51A"/>
@@ -559,7 +559,7 @@ export default function DashboardPage() {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <Button asChild size="lg" className="w-full justify-start bg-gradient-to-r from-[#FB0091] to-pink-500 text-white shadow-lg">
-                    <Link href="/submissions">
+                    <Link href="/submit">
                       <FilePlus2 className="mr-3 h-5 w-5" />
                       Submit New Creation
                     </Link>

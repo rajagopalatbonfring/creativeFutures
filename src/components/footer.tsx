@@ -195,6 +195,7 @@ export function Footer() {
                     type="email" 
                     placeholder="Your email"
                     className="flex-1 px-4 py-2 rounded-full text-black font-semibold text-sm outline-none"
+                    suppressHydrationWarning
                   />
                   <Button 
                     size="icon"

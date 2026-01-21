@@ -1,3 +1,5 @@
+// // lib/types.ts
+
 // export const AgeGroups = {
 //   '2-4': 'Little Explorers',
 //   '5-6': 'Creative Starters',
@@ -7,9 +9,9 @@
 //   '13-14': 'Growing Scholars',
 //   '15-16': 'Teen Journalists',
 // } as const;
+
 // export type AgeGroup = keyof typeof AgeGroups;
 // export type StageName = typeof AgeGroups[AgeGroup];
-
 
 // export const ActivityCategories = {
 //   'young-pen': 'The Young Pen',
@@ -19,9 +21,13 @@
 //   'colourful-cultures': 'Our Colourful Cultures',
 //   'kindness-corner': 'Kindness Corner',
 // } as const;
+
 // export type ActivityCategory = keyof typeof ActivityCategories;
 // export type ActivityCategoryName = typeof ActivityCategories[ActivityCategory];
 
+// // ────────────────────────────────────────────────
+// // Updated Activity type
+// // ────────────────────────────────────────────────
 // export type Activity = {
 //   id: string;
 //   title: string;
@@ -29,9 +35,13 @@
 //   category: ActivityCategory;
 //   ageGroup: AgeGroup;
 //   imageId: string;
-//   isSpecialChallenge ?: boolean;
+//   isSpecialChallenge: boolean;      // required now (we always set it)
+//   isCurrent?: boolean;              // optional – only for active weekly challenges
 // };
 
+// // ────────────────────────────────────────────────
+// // Submission type (unchanged, but good to confirm)
+// // ────────────────────────────────────────────────
 // export type Submission = {
 //   id: string;
 //   title: string;
@@ -43,9 +53,12 @@
 //   description?: string;
 //   fileUrl?: string;
 //   mediaType?: 'image' | 'video' | 'audio' | 'text';
-//   createdAt ?: number;
+//   createdAt?: number;
 // };
 
+// // ────────────────────────────────────────────────
+// // User profile (unchanged)
+// // ────────────────────────────────────────────────
 // export type UserProfile = {
 //   uid: string;
 //   email: string | null;
@@ -63,8 +76,18 @@
 
 
 
+
+
+
+
+
+
+
 // lib/types.ts
 
+// ────────────────────────────────────────────────
+// Age Groups (global, used everywhere)
+// ────────────────────────────────────────────────
 export const AgeGroups = {
   '2-4': 'Little Explorers',
   '5-6': 'Creative Starters',
@@ -78,34 +101,21 @@ export const AgeGroups = {
 export type AgeGroup = keyof typeof AgeGroups;
 export type StageName = typeof AgeGroups[AgeGroup];
 
-export const ActivityCategories = {
-  'young-pen': 'The Young Pen',
-  'draw-dream': 'Draw Your Dream',
-  'sing-dance-shine': 'Sing Dance Shine',
-  'kid-scientists': 'Kid Scientists',
-  'colourful-cultures': 'Our Colourful Cultures',
-  'kindness-corner': 'Kindness Corner',
-} as const;
-
-export type ActivityCategory = keyof typeof ActivityCategories;
-export type ActivityCategoryName = typeof ActivityCategories[ActivityCategory];
-
 // ────────────────────────────────────────────────
-// Updated Activity type
+// Activity (no category anymore — only 10 core + 4 special)
 // ────────────────────────────────────────────────
 export type Activity = {
   id: string;
   title: string;
   description: string;
-  category: ActivityCategory;
-  ageGroup: AgeGroup;
+  ageGroups: AgeGroup[];          // which age groups can participate
   imageId: string;
-  isSpecialChallenge: boolean;      // required now (we always set it)
-  isCurrent?: boolean;              // optional – only for active weekly challenges
+  isSpecialChallenge: boolean;    // true only for weekly/rotating ones
+  isCurrent?: boolean;            // optional — for currently active specials
 };
 
 // ────────────────────────────────────────────────
-// Submission type (unchanged, but good to confirm)
+// Submission (updated to match new activity structure)
 // ────────────────────────────────────────────────
 export type Submission = {
   id: string;

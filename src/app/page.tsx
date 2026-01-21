@@ -262,7 +262,7 @@ export default function Home() {
   ];
 
   const submissionSteps = [
-    { number: '1', title: 'Pick Your Zone', description: 'Choose from writing, art, performance, or STEM', emoji: '🎯' },
+    { number: '1', title: 'Pick Your Age', description: 'Select Your Category and Explore Your Eligible Activities', emoji: '🎯' },
     { number: '2', title: 'Create & Upload', description: 'Share your amazing work with us', emoji: '📤' },
     { number: '3', title: 'Get Featured', description: 'See your creation in our gallery!', emoji: '⭐' },
   ];
@@ -272,14 +272,9 @@ export default function Home() {
       {/* Hero Section with Blob Background */}
       <section 
         id="home"   
-        className="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10"
+        className="relative pt-40 pb-24 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10"
         // style={{ backgroundImage: `url("/homeimg1.jpeg")`, backgroundRepeat:"repeat", backgroundSize:"contain", backgroundPosition:"center" }}
       >
-        {/* Decorative Blobs */}
-        {/* <div className="absolute top-0 left-0 w-96 h-96 bg-[#FB0091]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#00B4EE]/20 rounded-full blur-3xl translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#FBC51A]/20 rounded-full blur-3xl"></div> */}
-        
         {/* Cloud SVGs */}
         <svg className="absolute top-20 left-10 w-24 h-16 opacity-40" viewBox="0 0 100 50">
           <path d="M20,35 Q15,35 15,30 Q15,25 20,25 Q20,20 25,20 Q30,20 30,25 Q35,25 35,30 Q35,35 30,35 Z" fill="#00B4EE"/>
@@ -459,9 +454,6 @@ export default function Home() {
 
       {/* Submission Process with Blob Background */}
       <section id="submit" className="relative bg-gradient-to-br from-[#FBC51A]/10 via-[#FB0091]/5 to-[#00B4EE]/10 mx-auto">
-        {/* Decorative Blobs */}
-        {/* <div className="absolute top-20 right-0 w-96 h-96 bg-[#FB0091]/10 rounded-full blur-3xl translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4EE]/10 rounded-full blur-3xl -translate-x-1/3"></div> */}
 
         <div className="absolute top-0 left-0 right-0">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-32 rotate-180">
@@ -534,7 +526,7 @@ export default function Home() {
             Join thousands of young creators sharing their amazing talents!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/submissions" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FB0091] to-pink-500 hover:from-pink-500 hover:to-[#FB0091] text-white shadow-xl hover:shadow-2xl transition-all text-lg px-10 py-4 rounded-full font-bold">
+            <a href="/participant-category" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FB0091] to-pink-500 hover:from-pink-500 hover:to-[#FB0091] text-white shadow-xl hover:shadow-2xl transition-all text-lg px-10 py-4 rounded-full font-bold">
                 Get Started Now <ArrowRight className="ml-2 w-6 h-6" />
             </a>
             <a href="/gallery" className="inline-flex items-center gap-2 border-2 border-black text-black hover:bg-black hover:text-white transition-all text-lg px-10 py-4 rounded-full font-bold">

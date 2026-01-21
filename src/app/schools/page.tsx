@@ -68,7 +68,7 @@ export default function SchoolsPage() {
   return (
     <div className="bg-white overflow-hidden">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#FBC51A]/10 via-[#FB0091]/5 to-[#00B4EE]/10">
+      <section className="relative pt-40 pb-20 overflow-hidden bg-gradient-to-br from-[#FBC51A]/10 via-[#FB0091]/5 to-[#00B4EE]/10">
 
         <svg className="absolute top-32 right-20 w-24 h-16 opacity-40" viewBox="0 0 100 50">
           <path d="M20,35 Q15,35 15,30 Q15,25 20,25 Q20,20 25,20 Q30,20 30,25 Q35,25 35,30 Q35,35 30,35 Z" fill="#FB0091"/>
