@@ -187,8 +187,8 @@ const resources = [
 const steps = [
     {
         number: '1',
-        title: 'Choose Your Quest',
-        description: 'Browse the activities below and pick one that sparks your interest.',
+        title: 'Pick Your Age',
+        description: 'Select Your Category and Explore Your Eligible Activities.',
         emoji: '🎯',
         color: 'bg-[#FB0091]'
     },
@@ -286,10 +286,11 @@ export default function ResourcesPage() {
                 <Card className="text-center border-0 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer h-full bg-white overflow-hidden">
                   {/* <div className="absolute top-0 right-0 w-20 h-20 bg-[#FBC51A]/20 rounded-bl-full"></div> */}
                   <CardHeader className="pt-8">
-                    <div className="text-6xl mb-4">{step.emoji}</div>
+                    
                     <div className={`inline-flex items-center justify-center w-12 h-12 ${step.color} text-white rounded-full text-xl font-black mb-4 shadow-lg`}>
                       {step.number}
                     </div>
+                    <div className="text-6xl mb-4">{step.emoji}</div>
                     <CardTitle className="font-headline text-2xl font-bold mb-2">{step.title}</CardTitle>
                     <CardDescription className="text-base">{step.description}</CardDescription>
                   </CardHeader>

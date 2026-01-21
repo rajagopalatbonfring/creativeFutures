@@ -307,8 +307,8 @@ export function FloatingNavbar() {
       { label: 'Parent-Child Activity Zone', href: '/activities' },
       { label: 'Submission Guidelines', href: '/submissions' },
       { label: 'Submit', href: '/submit' },
-      { label: 'Recognition', href: '/recognition' },
-      { label: 'Blog', href: '/blog' },
+      { label: 'Recognition and Participation', href: '/recognition' },
+      { label: 'Blog/ Monthly News Letter', href: '/blog' },
       { label: 'Contact', href: '/contact' },
     ];
 

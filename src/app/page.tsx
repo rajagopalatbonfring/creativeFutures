@@ -303,7 +303,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-gradient-to-r from-[#FB0091] to-pink-500 hover:from-pink-500 hover:to-[#FB0091] text-white shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-6 rounded-full">
-                <Link href="/submissions">
+                <Link href="/participant-category">
                   Start Creating <ArrowRight className="ml-2" />
                 </Link>
               </Button>
@@ -478,8 +478,8 @@ export default function Home() {
                 <Card className="relative overflow-hidden h-full bg-white hover:shadow-2xl transition-all border-0 hover:-translate-y-2 cursor-pointer">
                   <div className="absolute top-0 right-0 w-20 h-20 bg-[#FBC51A]/20 rounded-bl-full"></div>
                   <CardHeader className="pt-8">
-                    <div className="text-6xl mb-4">{step.emoji}</div>
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-black text-white rounded-full text-xl font-black mb-4">
+                    <div className="text-6xl mb-8">{step.emoji}</div>
+                    <div className="inline-flex items-center justify-center w-10 h-10 bg-black text-white rounded-full text-xl font-black mb-4">
                       {step.number}
                     </div>
                     <CardTitle className="font-headline text-2xl font-bold mb-2">{step.title}</CardTitle>
