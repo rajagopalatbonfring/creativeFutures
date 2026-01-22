@@ -605,7 +605,7 @@ export default function SubmissionDetailPage() {
   return (
     <div className="bg-white overflow-hidden min-h-screen">
       {/* Hero Section with Wave */}
-      <section className="relative pt-40 pb-12 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10">
+      <section className="relative pt-40 pb-12 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-white">
         {/* Playful Clouds & Stars */}
         <svg className="absolute top-20 left-10 w-24 h-16 opacity-40" viewBox="0 0 100 50">
           <path d="M20,35 Q15,35 15,30 Q15,25 20,25 Q20,20 25,20 Q30,20 30,25 Q35,25 35,30 Q35,35 30,35 Z" fill="#00B4EE"/>
@@ -639,22 +639,18 @@ export default function SubmissionDetailPage() {
 
       {/* Main Content – unchanged from your original design */}
       <section className="py-12 bg-white">
-        
-
-
         <div className="container mx-auto px-4">
-          
-        {/* Back Button */}
-        <Button 
-          asChild 
-          variant="ghost" 
-          className="mb-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white transition-all border-2 border-transparent hover:border-[#FB0091]/20"
-        >
-          <Link href="/archives">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Archives
-          </Link>
-        </Button> 
+          {/* Back Button */}
+          <Button 
+            asChild 
+            variant="ghost" 
+            className="mb-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white transition-all border-2 border-transparent hover:border-[#FB0091]/20"
+          >
+            <Link href="/archives">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Archives
+            </Link>
+          </Button> 
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-8xl mx-auto">
             {/* Media Preview */}
@@ -666,8 +662,6 @@ export default function SubmissionDetailPage() {
               {renderMedia()}
             </motion.div>
 
-            
-
             {/* Details Column */}
             <motion.div
               className="flex flex-col justify-center space-y-8"
@@ -675,20 +669,19 @@ export default function SubmissionDetailPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-                            {/* Title & Author */}
-              <div>
+              {/* Title & Author */}
+              <div className='flex flex-col'>
                 <Badge 
                   className={`mb-4 w-fit bg-gradient-to-r ${mediaColor} text-white shadow-lg text-base py-1.5 px-4 border-0 font-semibold`}
                 >
                   {submission.activityTitle} 🎭
                 </Badge>
+                <span className="mb-4 text-sm font-medium text-gray-600">
+                  {getPublicationPath()}
+                </span> 
                 <h1 className="text-4xl md:text-5xl font-headline font-black mb-4 leading-tight">
                   {submission.title}
                 </h1>
-                  <span className="mb-10 text-sm font-medium text-gray-600 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-gray-200">
-                    {getPublicationPath()}
-                  </span> 
-
                 <div className="bg-gradient-to-r from-[#FBC51A]/10 to-[#FB0091]/5 rounded-2xl p-5 border-2 border-[#FBC51A]/20 mb-6">
                                 
                   <div className="flex items-center gap-3 mb-2 text-xl text-gray-800 font-bold">
@@ -737,36 +730,37 @@ export default function SubmissionDetailPage() {
                   </div>
                 </div>
               )}
-
-              {/* From Activity Card */}
-              <div className="border-0 shadow-2xl overflow-hidden rounded-[2rem] bg-white transform hover:scale-[1.02] transition-transform">
-                <div className={`h-3 bg-gradient-to-r ${mediaColor}`}></div>
-                <div className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Award className="w-8 h-8 text-[#FBC51A]" />
-                    <h3 className="font-black text-2xl text-gray-900">From Activity 🎯</h3>
-                  </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                    This amazing creation was submitted for the{' '}
-                    <span className="font-black text-gray-900 bg-yellow-100 px-2 py-1 rounded">
-                      {submission.activityTitle}
-                    </span>{' '}
-                    activity!
-                  </p>
-                  <Button 
-                    asChild 
-                    className={`w-full bg-gradient-to-r ${mediaColor} text-white hover:shadow-2xl transition-all border-0 py-4 px-6 rounded-2xl font-black text-lg transform hover:scale-105`}
-                  >
-                    <Link href={`/submit?activity=${submission.activityId}`}>
-                      Try this activity yourself! 🚀
-                    </Link>
-                  </Button>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
       </section>
+
+       <section className="py-20 bg-white px-4 max-w-3xl mx-auto">
+        {/* From Activity Card */}
+        <div className="border-0 shadow-lg overflow-hidden rounded-[2rem] bg-white transform hover:scale-[1.02] transition-transform">
+          <div className="p-8">
+            <div className="flex items-center gap-3 mb-4">
+              <Award className="w-8 h-8 text-[#FBC51A]" />
+              <h3 className="font-black text-2xl text-gray-900">From Activity</h3>
+            </div>
+            <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+              This amazing creation was submitted for the{' '}
+              <span className="font-black text-gray-900 bg-yellow-100 px-2 py-1 rounded">
+                {submission.activityTitle}
+              </span>{' '}
+              activity!
+            </p>
+            <Button 
+              asChild 
+              className={`w-full bg-gradient-to-r ${mediaColor} text-white hover:shadow-2xl transition-all border-0 py-4 px-6 rounded-2xl font-black text-lg transform hover:scale-105`}
+            >
+              <Link href={`/submit?activity=${submission.activityId}`}>
+                Try this activity yourself! 🚀
+              </Link>
+            </Button>
+          </div>
+        </div>
+       </section>
     </div>
   );
 }
