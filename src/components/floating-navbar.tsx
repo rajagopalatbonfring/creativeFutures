@@ -362,9 +362,10 @@ export function FloatingNavbar() {
                             </div> */}
                                 <div className="flex items-center gap-3">
                                     <h1 className="font-black text-2xl">
-                                        <span className="inline-block bg-pink-500 text-white px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
-                                        <span className="mx-2 text-gray-700 font-bold">by and for</span>
-                                        <span className="inline-block bg-blue-400 text-white px-2 py-1 rounded-lg transform rotate-1 shadow-md">Kids</span>
+                                        <span className="inline-block text-5xl mr-4">Creative Futures :</span>
+                                        <span className="inline-block bg-pink-500 text-white px-2 py-1 rounded-lg transform -rotate-1 shadow-md text-3xl">A Journal</span>
+                                        <span className="mx-2 text-gray-700 font-bold text-3xl">by and for</span>
+                                        <span className="inline-block bg-blue-400 text-white px-2 py-1 rounded-lg transform rotate-1 shadow-md text-3xl">Kids</span>
                                     </h1>
                                 </div>
                             </Link>

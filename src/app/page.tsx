@@ -453,7 +453,7 @@ export default function Home() {
       {/* Hero Section */}
       <section 
         id="home"   
-        className="relative pt-40 pb-24 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10"
+        className="relative pt-56 pb-24 overflow-hidden bg-gradient-to-br from-[#00B4EE]/10 via-[#FB0091]/5 to-[#FBC51A]/10"
       >
         {/* Clouds */}
         <svg className="absolute top-20 left-10 w-24 h-16 opacity-40" viewBox="0 0 100 50">
