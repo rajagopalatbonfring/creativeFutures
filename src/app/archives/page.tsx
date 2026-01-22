@@ -51,7 +51,7 @@ export default function ArchivesPage() {
 
 
         <h1 className="text-5xl font-headline font-black text-center mb-4">
-          Creative Futures <span className="text-[#FB0091]">Archives</span>
+          A Journal By and For Kids <span className="text-[#FB0091]">Archives</span>
         </h1>
         <p className="text-xl text-center text-gray-600 mb-16">
           Explore featured creations from past issues — stories, art, performances & more!

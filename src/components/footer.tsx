@@ -120,17 +120,15 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-white">
               {/* Brand Section */}
               <div>
-                <Link href="/" className="flex items-center gap-2 mb-4">
-                    <div className="relative">
-                        <div className="w-12 h-12 bg-gradient-to-br from-gray-200 via-[#00B4EE] to-gray-200 rounded-full flex items-center justify-center font-black text-white text-xl shadow-lg group-hover:scale-105 transition-transform">
-                            CF
-                        </div>
-                    </div>
+                <Link href="/" className="flex items-center gap-2 mb-4 bg-white px-2 py-2 rounded-lg shadow-lg inline-block">
+                  <div className="flex items-center gap-3">
+                      <h1 className="font-black text-2xl">
+                          <span className="inline-block bg-pink-400 text-white px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
+                          <span className="mx-2 text-gray-700 font-bold">by and for</span>
+                          <span className="inline-block bg-blue-400 text-white px-2 py-1 rounded-lg transform rotate-1 shadow-md">Kids</span>
+                      </h1>
+                  </div>
                 </Link>
-                <h3 className="font-black text-2xl mb-0">Creative Futures</h3>
-                <p className="text-white/90 text-sm leading-relaxed mb-4">
-                  Where imagination meets creativity!
-                </p>
                 <div className="flex gap-3">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#FB0091] cursor-pointer hover:scale-110 transition-transform">
                     <Facebook className="w-5 h-5" />
@@ -241,7 +239,7 @@ export function Footer() {
           
           <div className="container text-center relative z-10 mt-6  mx-auto">
             <p className="text-black font-black text-sm">
-              © {new Date().getFullYear()} Creative Futures Journal ✨ All Rights Reserved
+              © {new Date().getFullYear()} A Journal By and For Kids ✨ All Rights Reserved
             </p>
           </div>
         </div>

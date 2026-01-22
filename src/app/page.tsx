@@ -472,7 +472,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 bg-white shadow-lg px-5 py-2 rounded-full text-sm font-bold mb-6 border-2 border-[#FB0091]/20">
               <Sparkles className="w-4 h-4 text-[#FB0091]" />
               <span className="bg-gradient-to-r from-[#FB0091] to-[#00B4EE] bg-clip-text text-transparent">
-                Creative Futures
+                A Journal By and For Kids
               </span>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-headline font-black leading-tight mb-6">
@@ -550,7 +550,7 @@ export default function Home() {
               Our <span className="text-[#FB0091]">Mission</span>
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Creative Futures is a vibrant community where young minds explore their creativity, develop their talents, and share their unique perspectives with the world. 🌟
+              A Journal By and For Kids is a vibrant community where young minds explore their creativity, develop their talents, and share their unique perspectives with the world. 🌟
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               We believe every child has a story to tell, a dream to draw, and ideas that can change the world!

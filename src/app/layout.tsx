@@ -57,7 +57,7 @@ import { FloatingNavbar } from '@/components/floating-navbar';
 // import { WaterBackground } from '@/components/fishbackground';
 
 export const metadata: Metadata = {
-  title: 'Creative Futures: A Journal By and For Kids',
+  title: 'A Journal By and For Kids',
   description: 'A place for kids to explore their creativity.',
 };
 

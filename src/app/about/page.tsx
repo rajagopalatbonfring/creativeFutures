@@ -492,7 +492,7 @@ export default function AboutPage() {
                         <h2 className="text-4xl md:text-5xl font-headline font-black mb-4">
                             Our Core <span className="text-[#FBC51A]">Values</span>
                         </h2>
-                        <p className="text-lg text-gray-600">What makes Creative Futures special 💫</p>
+                        <p className="text-lg text-gray-600">What makes Us special 💫</p>
                     </motion.div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                         {coreValues.map((value, index) => (
