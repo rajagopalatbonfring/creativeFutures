@@ -330,7 +330,7 @@ export function ActivityCard({ activity }: ActivityCardProps) {
           <div className="flex items-center gap-2">
             <div className={`h-1 w-1 rounded-full bg-gradient-to-r ${badgeColor}`}></div>
             <p className="text-sm text-gray-500 font-medium">
-              Ages {activity.ageGroups[0]}–{activity.ageGroups[activity.ageGroups.length - 1]}
+              Ages {activity.ageGroups[0]}to{activity.ageGroups[activity.ageGroups.length - 1]}
             </p>
           </div>
         </CardHeader>

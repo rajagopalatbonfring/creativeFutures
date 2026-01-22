@@ -152,6 +152,12 @@ export type Submission = {
   tags: string[];
   difficulty: 'Easy' | 'Medium' | 'Hard';
   ageGroup: string;
+
+  // ─── New fields for journal/archive structure ───
+  isPublished: boolean;              // true = featured in archive
+  publishedYear?: number;            // e.g. 2025
+  publishedIssue?: 1 | 2 | 3 | 4;    // 1 = Q1 (Jan-Mar), 2 = Q2 (Apr-Jun), etc.
+  publishedAt?: number;              // exact timestamp when approved/published
 };
 
 

@@ -81,7 +81,7 @@ export default function RootLayout({
           <AuthProvider>
             {/* <WaterBackground /> Add fish background here */}
             <FloatingNavbar />
-            <main className="relative z-10">{children}</main> {/* Add z-index to keep content above fish */}
+            <main className="relative z-10 bg-white">{children}</main> {/* Add z-index to keep content above fish */}
             <Footer />
             <Toaster />
           </AuthProvider>
