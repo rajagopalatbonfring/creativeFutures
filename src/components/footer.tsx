@@ -120,12 +120,12 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-white">
               {/* Brand Section */}
               <div>
-                <Link href="/" className="flex items-center gap-2 mb-4 bg-white px-2 py-2 rounded-lg shadow-lg inline-block">
+                <Link href="/" className="flex items-center gap-2 mb-4 inline-block">
                   <div className="flex items-center gap-3">
                       <h1 className="font-black text-2xl">
-                          <span className="inline-block bg-pink-400 text-white px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
-                          <span className="mx-2 text-gray-700 font-bold">by and for</span>
-                          <span className="inline-block bg-blue-400 text-white px-2 py-1 rounded-lg transform rotate-1 shadow-md">Kids</span>
+                          <span className="inline-block bg-white text-pink-500 px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
+                          <span className="mx-2 text-gray-900 font-bold">by and for</span>
+                          <span className="inline-block bg-white text-blue-400 px-2 py-1 rounded-lg transform rotate-1 shadow-md">Kids</span>
                       </h1>
                   </div>
                 </Link>

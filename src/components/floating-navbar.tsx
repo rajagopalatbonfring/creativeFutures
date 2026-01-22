@@ -284,7 +284,7 @@ export function FloatingNavbar() {
       { label: 'About us', href: '/about' },
       { label: 'Participant Category', href: '/participant-category' },
     //   { label: 'Submission Gallery', href: '/gallery' },
-      { label: 'Archives Gallery', href: '/archives' },
+      { label: 'Chronicles', href: '/archives' },
       { label: 'Resource Hub', href: '/resources' },
       { label: 'Contact', href: '/contact' },
       { label: 'Teacher’s Corner', href: '/teachers' },
@@ -362,7 +362,7 @@ export function FloatingNavbar() {
                             </div> */}
                                 <div className="flex items-center gap-3">
                                     <h1 className="font-black text-2xl">
-                                        <span className="inline-block bg-pink-400 text-white px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
+                                        <span className="inline-block bg-pink-500 text-white px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
                                         <span className="mx-2 text-gray-700 font-bold">by and for</span>
                                         <span className="inline-block bg-blue-400 text-white px-2 py-1 rounded-lg transform rotate-1 shadow-md">Kids</span>
                                     </h1>

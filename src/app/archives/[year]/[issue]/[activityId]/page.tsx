@@ -59,7 +59,7 @@ export default function IssueActivityPage({
         <section className="container mx-auto px-4 pb-16 max-w-7xl">
           <a 
           href="/archives"
-          className="p-2 mb-4 inline-flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white transition-all border-2 border-transparent hover:border-[#FB0091]/20"
+          className="p-2 mb-8 inline-flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white transition-all border-2 border-transparent hover:border-[#FB0091]/20"
           >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Archives
