@@ -572,7 +572,7 @@ export default function Home() {
             title="Explore Activity Zones"
             subtitle="Find the perfect creative space for your talents!"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-8">
             {activityZones.map((zone, index) => (
               <motion.div
                 key={zone.title}
@@ -679,7 +679,7 @@ export default function Home() {
       </Section>
 
       {/* Submission Process */}
-      <section id="submit" className="relative bg-gradient-to-br from-[#FBC51A]/10 via-[#FB0091]/5 to-[#00B4EE]/10">
+      <section id="submit" className="px-4 md:px-8 relative bg-gradient-to-br from-[#FBC51A]/10 via-[#FB0091]/5 to-[#00B4EE]/10">
         <div className="absolute top-0 left-0 right-0">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-32 rotate-180">
             <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="white"/>

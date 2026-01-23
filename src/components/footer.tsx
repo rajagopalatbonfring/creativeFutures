@@ -106,7 +106,7 @@ export function Footer() {
       {/* Wavy Layers */}
       <div className="relative mx-auto">
         {/* Pink Wave */}
-        <div className="relative bg-[#FB0091] pt-24 pb-12">
+        <div className="relative bg-[#FB0091] pt-24 px-6 md:px-8 pb-12">
           <svg className="absolute top-0 left-0 right-0 w-full h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,0 L0,0 Z" fill="white"/>
           </svg>
@@ -120,11 +120,12 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-white">
               {/* Brand Section */}
               <div>
-                <Link href="/" className="flex items-center gap-2 mb-4 inline-block">
+                <Link href="/" className="flex items-center gap-2 mb-10 inline-block">
                   <div className="flex items-center gap-3">
                       <h1 className="font-black text-2xl">
+                        <span className="inline-block text-5xl mb-2">Creative Futures :</span>
                           <span className="inline-block bg-white text-pink-500 px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
-                          <span className="mx-2 text-gray-900 font-bold">by and for</span>
+                          <span className="mx-2 text-white font-bold">by and for</span>
                           <span className="inline-block bg-white text-blue-400 px-2 py-1 rounded-lg transform rotate-1 shadow-md">Kids</span>
                       </h1>
                   </div>
@@ -212,7 +213,7 @@ export function Footer() {
         </div>
 
         {/* Blue Wave */}
-        <div className="relative bg-[#00B4EE] py-8">
+        <div className="relative bg-[#00B4EE] py-8 px-6 md:px-8">
           <svg className="absolute top-0 left-0 right-0 w-full h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,60 C300,20 500,100 800,60 C1000,30 1100,80 1200,60 L1200,0 L0,0 Z" fill="#FB0091"/>
           </svg>
@@ -232,7 +233,7 @@ export function Footer() {
         </div>
 
         {/* Yellow Wave */}
-        <div className="relative bg-[#FBC51A] py-6">
+        <div className="relative bg-[#FBC51A] py-6 px-6 md:px-8">
           <svg className="absolute top-0 left-0 right-0 w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,50 C400,10 600,90 1200,50 L1200,0 L0,0 Z" fill="#00B4EE"/>
           </svg>
