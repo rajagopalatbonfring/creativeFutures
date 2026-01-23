@@ -121,7 +121,7 @@ export function Footer() {
               {/* Brand Section */}
               <div>
                 <Link href="/" className="flex items-center gap-2 mb-10 inline-block">
-                  <div className="flex items-center gap-3">
+                  <div className="hidden sm:block flex items-center gap-3">
                       <h1 className="font-black text-2xl">
                         <span className="inline-block text-5xl mb-2">Creative Futures :</span>
                           <span className="inline-block bg-white text-pink-500 px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
@@ -129,6 +129,14 @@ export function Footer() {
                           <span className="inline-block bg-white text-blue-400 px-2 py-1 rounded-lg transform rotate-1 shadow-md">Kids</span>
                       </h1>
                   </div>
+                  <div className="block sm:hidden flex items-center gap-3">
+                      <h1 className="font-black text-lg">
+                        <span className="inline-block text-3xl mb-2">Creative Futures :</span>
+                          <span className="inline-block bg-white text-pink-500 px-2 py-1 rounded-lg transform -rotate-1 shadow-md">A Journal</span>
+                          <span className="mx-2 text-white font-bold">by and for</span>
+                          <span className="inline-block bg-white text-blue-400 px-2 py-1 rounded-lg transform rotate-1 shadow-md">Kids</span>
+                      </h1>
+                  </div>                  
                 </Link>
                 <div className="flex gap-3">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#FB0091] cursor-pointer hover:scale-110 transition-transform">
