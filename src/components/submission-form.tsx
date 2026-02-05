@@ -364,25 +364,26 @@ import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent } from './ui/card';
 import { AgeGroup } from '@/lib/types';
 
+// ────────────────────────────────────────────────
+// Schema (file is handled separately – not in zod)
 const submissionSchema = z.object({
   activityId: z.string().min(1, 'Please select an activity.'),
-  title: z.string().min(3, 'Title must be at least 3 characters.').max(50, 'Title is too long.'),
-  description: z.string().max(300, 'Description is too long.').optional(),
-  file: z.any().refine((file) => file, 'An artwork file is required.'),
+  title: z.string().min(3, 'Title must be at least 3 characters.').max(50),
+  discription: z.string().max(300).optional(), // ← using your spelling
 });
 
 type SubmissionFormValues = z.infer<typeof submissionSchema>;
 
 const steps = [
   { id: 'step1', fields: ['activityId'] },
-  { id: 'step2', fields: ['title', 'description'] },
-  { id: 'step3', fields: ['file'] },
+  { id: 'step2', fields: ['title', 'discription'] },
+  { id: 'step3', fields: [] }, // file is custom
   { id: 'success' },
 ];
 
 interface SubmissionFormProps {
   selectedActivityId: string | null;
-  userAgeGroup: AgeGroup; // ← new prop from auth
+  userAgeGroup: AgeGroup;
 }
 
 export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionFormProps) {
@@ -390,8 +391,8 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 
-  // Get only eligible activities for this user's age
   const eligibleActivities = getEligibleActivities(userAgeGroup);
 
   const form = useForm<SubmissionFormValues>({
@@ -399,61 +400,100 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
     defaultValues: {
       activityId: selectedActivityId ?? '',
       title: '',
-      description: '',
-      file: undefined,
+      discription: '',
     },
   });
 
   const nextStep = async () => {
     const fields = steps[currentStep].fields;
-    if (!fields?.length) return;
 
-    const isValid = await form.trigger(fields as any, { shouldFocus: true });
-    if (!isValid) return;
+    if (fields.length > 0) {
+      const isValid = await form.trigger(fields as any, { shouldFocus: true });
+      if (!isValid) return;
+    }
+
+    // Special handling for step 3 (file upload)
+    if (currentStep === 2) {
+      if (!uploadedFile) {
+        toast({
+          variant: 'destructive',
+          title: 'File required',
+          description: 'Please upload your creation before submitting.',
+        });
+        return;
+      }
+      await handleSubmit();
+      return;
+    }
 
     if (currentStep < steps.length - 2) {
-      setCurrentStep(prev => prev + 1);
-    } else if (currentStep === steps.length - 2) {
-      await handleSubmit();
+      setCurrentStep((prev) => prev + 1);
     }
   };
 
   const prevStep = () => {
-    if (currentStep > 0) {
-      setCurrentStep(prev => prev - 1);
-    }
+    if (currentStep > 0) setCurrentStep((prev) => prev - 1);
   };
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call (replace with real Firebase / server action)
-      await new Promise(resolve => setTimeout(resolve, 1800));
+      const userStr = sessionStorage.getItem('user');
+      let submittedBy = 'guest'; // fallback
 
-      toast({
-        title: "Submission Received!",
-        description: "Your creation has been submitted for review.",
+      if (userStr) {
+        try {
+          const user = JSON.parse(userStr);
+          submittedBy = user._id || user.id || 'unknown';
+        } catch {}
+      }
+
+      const values = form.getValues();
+
+      // Build FormData
+      const formData = new FormData();
+      formData.append('type', values.activityId);           // assuming "type" = activityId
+      formData.append('title', values.title);
+      formData.append('discription', values.discription || ''); // your spelling
+      formData.append('submittedBy', submittedBy);
+
+      if (uploadedFile) {
+        formData.append('file', uploadedFile);
+      }
+
+      const response = await fetch('http://localhost:5000/api/create/createjournel', {
+        method: 'POST',
+        body: formData,
       });
 
-      // Move to success step
+      if (!response.ok) {
+        const errText = await response.text();
+        throw new Error(errText || 'Server error');
+      }
+
+      toast({
+        title: 'Submission Received!',
+        description: 'Your creation has been submitted for review.',
+      });
+
       setCurrentStep(steps.length - 1);
 
-      // Auto-redirect to dashboard after 5 seconds
       setTimeout(() => {
         router.push('/dashboard');
       }, 5000);
-    } catch (error) {
+    } catch (error: any) {
+      console.error(error);
       toast({
-        variant: "destructive",
-        title: "Submission failed",
-        description: "Something went wrong. Please try again.",
+        variant: 'destructive',
+        title: 'Submission failed',
+        description: error.message || 'Something went wrong. Please try again.',
       });
+    } finally {
       setIsSubmitting(false);
     }
   };
 
-  // If no eligible activities → show message
   if (eligibleActivities.length === 0) {
     return (
       <Card className="border-0 shadow-xl">
@@ -480,16 +520,16 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
     <Card className="border-0 shadow-xl">
       <CardContent className="p-6 md:p-8">
         <Form {...form}>
-          <form className="space-y-8">
+          <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentStep}
                 initial={{ x: 300, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -300, opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
               >
-                {/* Step 1: Choose Activity (only eligible ones) */}
+                {/* Step 1: Activity */}
                 {currentStep === 0 && (
                   <FormField
                     control={form.control}
@@ -504,7 +544,7 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            {eligibleActivities.map(activity => (
+                            {eligibleActivities.map((activity) => (
                               <SelectItem key={activity.id} value={activity.id}>
                                 {activity.isSpecialChallenge ? `${activity.title} (Weekly)` : activity.title}
                               </SelectItem>
@@ -517,7 +557,7 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
                   />
                 )}
 
-                {/* Step 2: Title & Description */}
+                {/* Step 2: Title + Description */}
                 {currentStep === 1 && (
                   <div className="space-y-6">
                     <FormField
@@ -535,7 +575,7 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
                     />
                     <FormField
                       control={form.control}
-                      name="description"
+                      name="discription"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Tell us about it (optional)</FormLabel>
@@ -553,27 +593,18 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
                   </div>
                 )}
 
-                {/* Step 3: File Upload */}
+                {/* Step 3: File */}
                 {currentStep === 2 && (
-                  <FormField
-                    control={form.control}
-                    name="file"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>3. Upload Your Creation</FormLabel>
-                        <FormControl>
-                          <FileUploader
-                            onFileChange={field.onChange}
-                            file={field.value}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  <div>
+                    <FormLabel>3. Upload Your Creation</FormLabel>
+                    <FileUploader
+                      onFileChange={(file) => setUploadedFile(file)}
+                      file={uploadedFile}
+                    />
+                  </div>
                 )}
 
-                {/* Success Step */}
+                {/* Success */}
                 {currentStep === 3 && (
                   <div className="text-center py-12 space-y-6">
                     <div className="flex justify-center">
@@ -582,26 +613,19 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
-                          transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+                          transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
                           className="absolute inset-0 flex items-center justify-center"
                         >
                           <PartyPopper className="h-10 w-10 text-yellow-500" />
                         </motion.div>
                       </div>
                     </div>
-
                     <h2 className="text-3xl font-bold font-headline text-green-700">
                       Submitted for Review!
                     </h2>
-
                     <p className="text-lg text-muted-foreground max-w-md mx-auto">
-                      Great job! Your creation has been successfully submitted and is now under review by our team.
+                      Great job! Your creation has been successfully submitted.
                     </p>
-
-                    <p className="text-base font-medium text-amber-700">
-                      You can track its status and see when it gets featured in your dashboard.
-                    </p>
-
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                       <Button
                         onClick={() => router.push('/dashboard')}
@@ -609,7 +633,6 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
                       >
                         Go to Dashboard
                       </Button>
-
                       <Button
                         variant="outline"
                         onClick={() => router.push('/gallery')}
@@ -618,7 +641,6 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
                         Back to Gallery
                       </Button>
                     </div>
-
                     <p className="text-sm text-muted-foreground pt-4">
                       Redirecting to dashboard in 5 seconds...
                     </p>
@@ -626,43 +648,43 @@ export function SubmissionForm({ selectedActivityId, userAgeGroup }: SubmissionF
                 )}
               </motion.div>
             </AnimatePresence>
+
+            {/* Navigation */}
+            {currentStep < 3 && (
+              <div className="mt-10 flex justify-between items-center">
+                <Button
+                  variant="outline"
+                  onClick={prevStep}
+                  disabled={currentStep === 0 || isSubmitting}
+                  className="px-6 py-5 text-base"
+                >
+                  <ArrowLeft className="mr-2 h-5 w-5" />
+                  Previous
+                </Button>
+
+                <Button
+                  onClick={nextStep}
+                  disabled={isSubmitting}
+                  className="px-8 py-5 text-base font-bold min-w-[140px]"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      Submitting...
+                    </>
+                  ) : currentStep === 2 ? (
+                    'Submit Creation'
+                  ) : (
+                    <>
+                      Next
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </>
+                  )}
+                </Button>
+              </div>
+            )}
           </form>
         </Form>
-
-        {/* Navigation Buttons */}
-        {currentStep < 3 && (
-          <div className="mt-10 flex justify-between items-center">
-            <Button
-              variant="outline"
-              onClick={prevStep}
-              disabled={currentStep === 0 || isSubmitting}
-              className="px-6 py-5 text-base"
-            >
-              <ArrowLeft className="mr-2 h-5 w-5" />
-              Previous
-            </Button>
-
-            <Button
-              onClick={nextStep}
-              disabled={isSubmitting}
-              className="px-8 py-5 text-base font-bold min-w-[140px]"
-            >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  Submitting...
-                </>
-              ) : currentStep === 2 ? (
-                'Submit Creation'
-              ) : (
-                <>
-                  Next
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </>
-              )}
-            </Button>
-          </div>
-        )}
       </CardContent>
     </Card>
   );

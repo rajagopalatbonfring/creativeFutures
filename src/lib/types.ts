@@ -96,6 +96,7 @@ export const AgeGroups = {
   '11-12': 'Young Creators',
   '13-14': 'Growing Scholars',
   '15-16': 'Teen Journalists',
+  '16+' : 'Teen Journalists'
 } as const;
 
 export type AgeGroup = keyof typeof AgeGroups;
